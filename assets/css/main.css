@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 56px;
+}
+
+nav {
+    background-color: rgba(255, 240, 234, 1);
+    background-size: 20px 20px;
+    background-position: 0 0;
+}
+
+.nav-link {
+    color: #101010;
+}
+
+.navbar .nav-link {
+    color: #101010 !important;
+}
+
+.button-container {
+    display: flex;
+    background-color: rgba(100, 240, 234, 0.1);
+    width: 250px;
+    height: 40px;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px,
+          rgba(245, 73, 144, 0.5) 5px 10px 15px;
+  }
+  
+  .button {
+    outline: 0 !important;
+    border: 0 !important;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #101010;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    transform: translateY(-3px);
+  }
+  
+  .icon {
+    font-size: 20px;
+  }
+
+  @media (min-width: 992px) {
+    .navbar-nav.d-lg-flex {
+        /* Add your computer-specific styles here */
+        display: none;
+    }
+}
+/* Styles for mobile button-container */
+@media (max-width: 991px) {
+    .navbar {
+        display: none; /* Hide the entire nav element on mobile */
+    }
+
+    .button-container.mobile-nav {
+        display: flex; /* Show the button-container on mobile */
+        align-items: center;
+        justify-content: space-around;
+        background-color: rgba(100, 240, 234, 1);
+        width: 100%; /* Make the container span the entire width */
+        position: fixed; /* Fixed position to stay at the top */
+        top: 0; /* Stick to the top of the screen */
+        left: 0; /* Start from the left edge */
+        z-index: 2000;
+        /* Toggle button styles */
+        .toggle-button {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        } /* Ensure it's above other content */
+        padding: 10px 0; /* Add some padding for spacing between buttons */
+    }
+
+    .button-container.mobile-nav .button {
+        outline: 0 !important;
+        border: 0 !important;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #101010;
+        transition: all ease-in-out 0.3s;
+        cursor: pointer;
+    }
+
+    .button-container.mobile-nav .button:hover {
+        transform: translateY(-3px);
+    }
+}
+
+.card {
+    color: #000;
+    padding: 0;
+    margin: 0;
+}
+.card .img-fluid {
+    height: 22rem;
+    object-fit: contain;
+    max-width: 75%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-text-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-text-container>h1 {
+    color: #333;
+}
+
+.welcome-text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #007BFF;
+}
+
+.hero-container {
+    display: flex;
+}
+
+.hero-text {
+    margin: auto;
+    color: #101010;
+    font: 700 normal 2.5rm 'tahoma';
+    text-shadow: 5px 2px #222324 2px 4px #222324, 3px 5px #222324;
+
+}
+
+.nav-link {
+    cursor: pointer;
+}

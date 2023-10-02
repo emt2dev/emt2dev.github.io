@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+        <link rel="stylesheet" href="assets/css/mdb.min.css" />
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <script src="assets/scripts/pdfjs/pdf.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg fixed-top" style="z-index: 2000; color: #101010;">
+                <div class="container-fluid">
+                    <a class="navbar-brand nav-link" href="http://127.0.0.1:5500/landing.html">
+                        <strong>DuronDavid.com</strong>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
+                            aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+            
+                    <!-- Collapse for both computer and mobile navigation -->
+                    <div class="collapse navbar-collapse" id="navbarExample01">
+                        <!-- Computer Navbar -->
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item active">
+                                <a class="nav-link text-center" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-center" href="#work">Work</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-center" href="#hobbies">Hobbies</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-center" href="#projects">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-center" href="#creds">Credentials</a>
+                            </li>
+                            <li class="nav-item">
+                              <a
+                                class="nav-link text-center"
+                                data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasExample"
+                                aria-controls="offcanvasExample"
+                              >
+                                Contact
+                              </a>
+                            </li>                            
+                        </ul>
+
+                        <!-- Contact Form -->
+
+            
+                        <!-- Social Media Icons -->
+                        <!-- <ul class="navbar-nav d-flex flex-row">
+                            <li class="nav-item me-3 me-lg-0">
+                                <a class="nav-link" href="https://www.instagram.com" rel="nofollow" target="_blank">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item me-3 me-lg-0">
+                                <a class="nav-link" href="https://www.facebook.com/" rel="nofollow" target="_blank">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item me-3 me-lg-0">
+                                <a class="nav-link" href="https://twitter.com/" rel="nofollow" target="_blank">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                        </ul> -->
+                    </div>                   
+                  </div>
+                </div>
+              </nav>        
+              <div class="button-container d-lg-none mobile-nav">
+                <button class="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1024 1024" stroke-width="0" fill="currentColor" stroke="currentColor" class="icon">
+                    <path d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 0 0-44.4 0L77.5 505a63.9 63.9 0 0 0-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0 0 18.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z"></path>
+                  </svg>
+                </button>
+                <button class="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" aria-hidden="true" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor" class="icon">
+                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linejoin="round" stroke-linecap="round"></path>
+                  </svg>
+                </button>
+                <button class="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="0" fill="currentColor" stroke="currentColor" class="icon">
+                    <path d="M12 2.5a5.5 5.5 0 0 1 3.096 10.047 9.005 9.005 0 0 1 5.9 8.181.75.75 0 1 1-1.499.044 7.5 7.5 0 0 0-14.993 0 .75.75 0 0 1-1.5-.045 9.005 9.005 0 0 1 5.9-8.18A5.5 5.5 0 0 1 12 2.5ZM8 8a4 4 0 1 0 8 0 4 4 0 0 0-8 0Z"></path>
+                  </svg>
+                </button>
+          
+                <button class="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" stroke-linejoin="round" stroke-linecap="round" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor" class="icon">
+                    <circle r="1" cy="21" cx="9"></circle>
+                    <circle r="1" cy="21" cx="20"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                  </svg>
+                </button>
+            </div>     
+        </header>
+        
+        <main>
+            <div class="container p-4 shadow-4 rou20nded-3" style="background-color: hsl(0, 0%, 94%);">           
+                <div class="container-fluid">
+                    <div class="card h-100">
+                        <div class="bg-image hover-overlay ripple text-center" data-mdb-ripple-color="light">
+                            <img src="assets/media/images/david/portrait.png" class="img-fluid" alt="Image" style="height: 25vw;" />
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <div class="welcome-text-container text-center pb-3">                                
+                                <div class="hero-container">
+                                    <div class="hero-text">
+                                    </div>
+                                </div>
+
+                                <h1>I'm David Duron</h1>
+
+                                <p>I like drinking coffee, played competitive esports (Call of Duty), saved lives; however, my main job is a <span class="highlight">Software Developer</span>. I've made android applications, "full-stack" applications, APIs/Microservices, MVC/Monoliths, Databases, E-Commerce websites, Content-Management systems, Customer Relationship Management applications, and even games!</p>
+                                <p>Most recently, I've worked with <span class="highlight">Citopia Online</span> as a freelance <span class="highlight">Software Developer</span>, where we are creating a social network that caters to teens; the "City" is an avatar-based network that allows users to express who they are via games, avatar dress-up, and communicating on our forum!</p>
+                                <p>In addition to <span class="highlight">Citopia</span>, I'm also creating my own ecosystem "<span class="highlight">BiteFinder</span>", this allows food trucks and restaurants to add to their existing stream of income by allowing online ordering and online paid reservations. This is a currently standalone service that is being tested by local food trucks!</p>
+                                <p>In my spare time, I still play non-competitive Call of Duty and keep up with technology changes in the software industry.</p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=gVV4mJda0rk">See me talk about healthcare software</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section id="tech">
+                <div class="row">
+                    <hr />
+                    <div class="col-lg-4">
+                        <img src="assets/media/images/tech/android.png" width="20%" alt="android" class="d-inline-flex">
+                        <img src="assets/media/images/tech/angular.svg" width="25%" alt="angular" class="d-inline-flex">
+                        <img src="assets/media/images/tech/apache2.svg" width="20%" alt="apache2" class="d-inline-flex">
+                        <img src="assets/media/images/tech/aspnet.png" width="20%" alt="asp.net" class="d-inline-flex">
+                        <img src="assets/media/images/tech/aws.png" width="25%" alt="aws" class="d-inline-flex">
+                        <img src="assets/media/images/tech/docker.png" width="20%" alt="docker" class="d-inline-flex">
+                        <img src="assets/media/images/tech/js.png" width="20%" alt="js" class="d-inline-flex">
+                        <img src="assets/media/images/tech/tdd.jpg" width="75%" alt="test driven development" class="d-inline-flex">
+                    </div>
+                    <div class="col-lg-4">
+                        
+                        <img src="assets/media/images/tech/k8s.png" width="20%" alt="k8s" class="d-inline-flex">
+                        <img src="assets/media/images/tech/lampDB.png" width="25%" alt="lampDB" class="d-inline-flex">
+                        <img src="assets/media/images/tech/linux.svg" width="25%" alt="linux" class="d-inline-flex">
+                        <img src="assets/media/images/tech/mongo.png" width="25%" alt="mongo" class="d-inline-flex">
+                        <img src="assets/media/images/tech/node.png" width="25%" alt="node" class="d-inline-flex">
+                        <img src="assets/media/images/tech/php.svg" width="25%" alt="php" class="d-inline-flex">
+                        <img src="assets/media/images/tech/rabbitmq.png" width="25%" alt="rabbitmq" class="d-inline-flex">
+                        <img src="assets/media/images/tech/React.png" width="25%" alt="react" class="d-inline-flex">
+                        <img src="assets/media/images/tech/redis.png" width="25%" alt="redis" class="d-inline-flex">
+                        
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="assets/media/images/tech/remix.png" width="25%" alt="remixjs" class="d-inline-flex">
+                        <img src="assets/media/images/tech/shopify.png" width="25%" alt="shopify partner" class="d-inline-flex">
+                        <img src="assets/media/images/tech/sqlserver.jpg" width="25%" alt="sql server" class="d-inline-flex">
+                        <img src="assets/media/images/tech/stripe.png" width="25%" alt="stripe" class="d-inline-flex">
+                        <img src="assets/media/images/tech/vue.png" width="25%" alt="vue js" class="d-inline-flex">
+                        <img src="assets/media/images/tech/win.png" width="25%" alt="windows" class="d-inline-flex">
+                        <img src="assets/media/images/tech/wp.png" width="25%" alt="wordpress" class="d-inline-flex">
+                        <img src="assets/media/images/tech/e2e.png" width="50%" alt="test driven development" class="d-inline-flex">
+                    </div>
+                </div>
+                <hr />
+            </section>
+            <section id="work">
+                <div class="container-fluid text-center">
+                    <h1>Work History</h1>
+                    <div class="col-lg-12 mb-4 d-flex justify-content-center">
+                        <lottie-player src="assets/media/lotties/work.json" background="transparent" style="width: 50vw; height: 35vw;" speed="0.5" loop controls autoplay>
+                        
+                        </lottie-player>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 mb-4">
+                            <div class="card h-100 text-center">
+                                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                                <img src="assets/media/images/david/fd1.JPG" class="img-fluid" />
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                </a>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Firefighter and EMT</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Bossier Parish Fire District One</h6>
+                                    <p class="card-text">
+                                        <pre style="white-space: pre-line;">
+                                            I am a former Firefighter and Emergency Medical Technician who transitioned into a career as a Software Developer after a decade of service. During my time in emergency services, I collaborated with the Veteran's Affairs as a contractor, contributing to a significant reduction in appointment wait times for patient transport. My record proudly boasts zero accidents, and all my patient interactions were characterized by a commitment to their well-being.
+    
+                                            My journey began at a small-town fire department when I was just sixteen, where I later became a paid part-time Firefighter at nineteen years old. Even when off-duty, I continued to volunteer my time, receiving the prestigious Presidential Volunteer Service Award (Gold Level) from President Barack Obama for my dedication. I was also the driver for implementing department policies such as implementing a staging area for all "Rapid-intervention tools".
+        
+                                            Working within a highly professional fire department taught me the importance of teamwork and integrity. I was fortunate to receive mentorship from some of the best leaders in the Fire Service, with the exception of A-Shift, which is universally known for its quirks. Among the various Fire Departments and EMS systems I encountered, this department stood out for its unparalleled knowledge and experience.
+        
+                                            In summary, my career transition reflects a commitment to excellence, teamwork, and unwavering dedication to service.
+                                        </pre>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 mb-4">
+                            <div class="card h-100 text-center">
+                                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                                <img src="assets/media/images/david/ems2.png" class="img-fluid" />
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                </a>
+                                </div>
+                                <div class="card-body">
+                                <h5 class="card-title">Emergency Medical Technician</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Veteran's Affairs, Federal Contractor</h6>
+                                <p class="card-text">
+                                    <pre style="white-space: pre-line;">
+                                        After transitioning to the Veteran's Affairs as an Emergency Medical Technician and federal contractor, my role encompassed patient care in both emergency and non-emergency settings, involving duties as a driver and care provider. During this period, I confronted the challenge of long appointment wait times within the VA system, and I proactively collaborated with the hospital system to address this crisis. My contribution involved devising a communication framework that streamlined processes between patients, transport agencies, and hospitals, resulting in significant reductions in wait times and, ultimately, saving lives.
+    
+                                        My experiences in this role led to my rapid promotion to a field training officer, where I leveraged my prior expertise from the Fire Department to train and mentor new EMTs and drivers. Additionally, I initiated daily training sessions and introduced the potential for FHIR integration into the ePCR systems. This initiative stemmed from my passion for enhancing patient care and ultimately motivated my transition into the field of software development.
+                                    </pre>
+                                </p>
+                                <a href="#!" class="btn btn-secondary">Call to Order</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 mb-4">
+                            <div class="card h-100 text-center">
+                                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                                <img src="assets/media/images/david/deskBlack.png" class="img-fluid" />
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                </a>
+                                </div>
+                                <div class="card-body">
+                                <h5 class="card-title">Business Development Manager.</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Safe Bite Training</h6>
+                                <p class="card-text">
+                                    <pre style="white-space: pre-line;">
+                                        I held the position of Business Development Manager for roughly eight years with Safe Bites Training, during which I focused on collaborating with restaurants. My primary responsibilities included training restaurant managers in ServSafe as an instructor and proctor. Additionally, I played a crucial role in securing contracts that not only ensured the growth of our company but also its long-term sustainability. This role allowed me to be comfortable speaking with clients.
+                                    </pre>
+                                </p>
+                                <a href="#!" class="btn btn-secondary">Call to Order</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 mb-4">
+                            <div class="card h-100 text-center">
+                                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                                <img src="assets/media/images/david/davidBlue.png" class="img-fluid" />
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                </a>
+                                </div>
+                                <div class="card-body">
+                                <h5 class="card-title">That's me, David Duron.</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Curved Arrow Networks</h6>
+                                <p class="card-text">
+                                    <pre style="white-space: pre-line;">
+                                        In 2018, I embarked on my software career as a Junior Software Developer, where I made significant contributions to a medical SaaS project. My work spanned the development of websites using both monolithic and microservices architectures. After two years, I transitioned to a non-developer role, collaborating closely with clients and our internal team to ensure that project requirements were not only met but also translated into profitable applications for both our company and clients.
+                                        
+                                        This role required seamless teamwork with fellow developers and contracted service providers, including graphic designers and specialists. Unfortunately, the company had to close due to the unsuccessful launch of their medical SaaS. Throughout this journey, I gained expertise in database management (MySQL/MariaDB, MS SQL Server 2019), PHP (monolithic/REST API) and .NET (MVC, API, WinForms) and proficiency in various JavaScript frameworks (React, Angular, and Vue).
+                                    </pre>
+                                </p>
+                                <a href="#!" class="btn btn-secondary">Call to Order</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>  
+            
+            <section id="hobbies">
+                <div class="container-fluid text-center">
+                <h1 class="pt-3 mb-3">Hobbies & Fun</h1>
+                    <div class="row">
+                        <div class="col-lg-3 mb-4 ">
+                            <div class="card h-100 text-center">
+                                <div class="bg-image hover-overlay ripple d-flex justify-content-center" data-mdb-ripple-color="light">
+                                    <lottie-player class="img-fluid " src="assets/media/lotties/gym.json" background="transparent" speed="0.5" loop controls autoplay>
+                            
+                                    </lottie-player>
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                </a>
+                                </div>
+                                <div class="card-body">
+                                <h5 class="card-title">I Lift Weights</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">And Run For My Life Afterwards!</h6>
+                                <p class="card-text">
+                                    <pre style="white-space: pre-line;">
+                                        I've lost eighty-pounds and enjoy the grind.
+                                    </pre>
+                                </p>
+                                <a href="#!" class="btn btn-secondary">Call to Order</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 mb-4 ">
+                            <div class="card h-100 text-center">
+                                <div class="bg-image hover-overlay ripple d-flex justify-content-center" data-mdb-ripple-color="light">
+                                    <lottie-player class="img-fluid " src="assets/media/lotties/cooking.json" background="transparent" speed="0.5" loop controls autoplay>
+                            
+                                    </lottie-player>
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                </a>
+                                </div>
+                                <div class="card-body">
+                                <h5 class="card-title">I Cook</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Ask me about my mac and cheese recipe!</h6>
+                                <p class="card-text">
+                                    <pre style="white-space: pre-line;">
+                                        Cooking is a lot like software development but the reward is available faster!
+                                    </pre>
+                                </p>
+                                <a href="#!" class="btn btn-secondary">Call to Order</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 mb-4 ">
+                            <div class="card h-100 text-center">
+                                <div class="bg-image hover-overlay ripple d-flex justify-content-center" data-mdb-ripple-color="light">
+                                    <lottie-player class="img-fluid " src="assets/media/lotties/fun.json" background="transparent" speed="0.5" loop controls autoplay>
+                            
+                                    </lottie-player>
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                </a>
+                                </div>
+                                <div class="card-body">
+                                <h5 class="card-title">I Play Video Games</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Console Gamer (Xbox) Candyroll93#5616022</h6>
+                                <p class="card-text">
+                                    <pre style="white-space: pre-line;">
+                                        Mindless fun to decompress: Call of Duty, Roblox
+                                    </pre>
+                                </p>
+                                <a href="#!" class="btn btn-secondary">Call to Order</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 mb-4 ">
+                            <div class="card h-100 text-center">
+                                <div class="bg-image hover-overlay ripple d-flex justify-content-center" data-mdb-ripple-color="light">
+                                    <lottie-player class="img-fluid " src="assets/media/lotties/study.json" background="transparent" speed="0.5" loop controls autoplay>
+                            
+                                    </lottie-player>
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                </a>
+                                </div>
+                                <div class="card-body">
+                                <h5 class="card-title">I Keep Up With the Jones'</h5>
+                                <p class="card-text">
+                                    <pre style="white-space: pre-line;">
+                                        With the rise of new tech, I like to build projects to see how it may compliment my existing skillset. No social life for me.
+                                    </pre>
+                                </p>
+                                <a href="#!" class="btn btn-secondary">Call to Order</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="projects">
+                <div class="container-fluid text-center">
+                    <h1>Project History</h1>
+                    <div class="col-lg-12 mb-4 d-flex justify-content-center">
+                        <lottie-player src="assets/media/lotties/showcase.json" background="transparent" style="width: 40vw; height: 35vw;" speed="0.5" loop controls autoplay>
+                        
+                        </lottie-player>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 mb-4 ">
+                            <div class="card h-100 text-center">
+                                <h5 class="card-title">E-Commerce store (shipped products)</h5>
+                                <div class="bg-image hover-overlay ripple d-flex justify-content-center" data-mdb-ripple-ccalculatesolor="light">
+                                    <div id="CarouselOne" class="carousel slide" data-mdb-ride="carousel">
+                                        <div class="carousel-inner">
+                                          <div class="carousel-item active">
+                                            <img src="assets/media/images/projects/vcs/vcs1.png" class="d-block w-100" alt="Mobile Restaurant"/>
+                                          </div>
+                                          <div class="carousel-item">
+                                            <img src="assets/media/images/projects/vcs/vcs2.png" class="d-block w-100" alt="Mobile Menu"/>
+                                          </div>
+                                          <div class="carousel-item">
+                                            <img src="assets/media/images/projects/vcs/vcs3.png" class="d-block w-100" alt="Mobile Menu"/>
+                                          </div>
+                                          <div class="carousel-item">
+                                            <img src="assets/media/images/projects/vcs/vcs4.png" class="d-block w-100" alt="Mobile Menu"/>
+                                          </div>
+                                          <div class="carousel-item">
+                                            <img src="assets/media/images/projects/vcs/vcs5.png" class="d-block w-100" alt="Mobile Menu"/>
+                                          </div>
+                                          <div class="carousel-item">
+                                            <img src="assets/media/images/projects/vcs/vcs6.png" class="d-block w-100" alt="Mobile Menu"/>
+                                          </div>
+                                          <div class="carousel-item">
+                                            <img src="assets/media/images/projects/vcs/vcs7.png" class="d-block w-100" alt="Mobile Menu"/>
+                                          </div>
+                                          <div class="carousel-item">
+                                            <img src="assets/media/images/projects/vcs/vcs8.png" class="d-block w-100" alt="Mobile Menu"/>
+                                          </div>
+                                        </div>
+                                        <button class="carousel-control-prev text-info" type="button" data-mdb-target="#CarouselOne" data-mdb-slide="prev">
+                                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                          <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next text-info" type="button" data-mdb-target="#CarouselOne" data-mdb-slide="next">
+                                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                          <span class="visually-hidden">Next</span>
+                                        </button>
+                                      </div>
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                </a>
+                                </div>
+                                <div class="card-body">
+                                <p class="card-text">
+                                    <pre style="white-space: pre-line;">
+                                        This candy company hired me to create an e-commerce platform for their etsy shop in order for their customers to order in bulk. Each instance of the product class contains an array of style class instances. The style class calculates packaged area and weight, then with each update to the cart, the cart filters available shipping options.
+                                    </pre>
+                                </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-4 ">
+                            <div class="card h-100 text-center">
+                                <h5 class="card-title">Restaurant with Online ordering and reservations</h5>
+                                <div class="bg-image hover-overlay ripple d-flex justify-content-center" data-mdb-ripple-color="light">
+                                    <div id="CarouselTwo" class="carousel slide" data-mdb-ride="carousel">
+                                        <div class="carousel-inner">
+                                          <div class="carousel-item active">
+                                            <img src="assets/media/images/projects/rest/rest1.png" class="d-block w-100" alt="Mobile Restaurant"/>
+                                          </div>
+                                          <div class="carousel-item">
+                                            <img src="assets/media/images/projects/rest/rest2.png" class="d-block w-100" alt="Mobile Menu"/>
+                                          </div>
+                                          <div class="carousel-item">
+                                            <img src="assets/media/images/projects/rest/rest3.png" class="d-block w-100" alt="Mobile Menu"/>
+                                          </div>
+                                        </div>
+                                        <button class="carousel-control-prev text-info" type="button" data-mdb-target="#CarouselTwo" data-mdb-slide="prev">
+                                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                          <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next text-info" type="button" data-mdb-target="#CarouselTwo" data-mdb-slide="next">
+                                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                          <span class="visually-hidden">Next</span>
+                                        </button>
+                                      </div>
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                </a>
+                                </div>
+                                <div class="card-body">
+                                <p class="card-text">
+                                    <pre style="white-space: pre-line;">
+                                        This is a local mexican restaurant (which I grew up eating) where I've modernized their existing website and added an admin panel for menu and inventory management.
+                                    </pre>
+                                </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-4 ">
+                            <div class="card h-100 text-center">
+                                <h5 class="card-title">CRM and LMS</h5>
+                                <div class="bg-image hover-overlay ripple d-flex justify-content-center" data-mdb-ripple-color="light">
+                                    <div id="CarouselThree" class="carousel slide" data-mdb-ride="carousel">
+                                        <div class="carousel-inner">
+                                          <div class="carousel-item active">
+                                            <img src="assets/media/images/projects/can/can1.png" class="d-block w-100" alt="Mobile Curved Arrow Networks"/>
+                                          </div>
+                                          <div class="carousel-item">
+                                            <img src="assets/media/images/projects/can/can2.png" class="d-block w-100" alt="Desktop Curved Arrow Networks"/>
+                                          </div>
+                                        </div>
+                                        <button class="carousel-control-prev text-info" type="button" data-mdb-target="#CarouselThree" data-mdb-slide="prev">
+                                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                          <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next text-info" type="button" data-mdb-target="#CarouselThree" data-mdb-slide="next">
+                                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                          <span class="visually-hidden">Next</span>
+                                        </button>
+                                      </div>
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                </a>
+                                </div>
+                                <div class="card-body">
+                                <p class="card-text">
+                                    <pre style="white-space: pre-line;">
+                                        Here is one of the websites that the company used internally for customer-relationship management and also send to clients who are interested in purchasing training.
+                                    </pre>
+                                </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <section id="creds">
+                <div class="row text-center">
+                    <h1>Credentials</h1>
+                    <div class="col-lg-12 mb-4 d-flex justify-content-center">
+                        <lottie-player src="assets/media/lotties/creds.json" background="transparent" style="width: 50vw; height: 35vw;" speed="0.5" loop controls autoplay>
+                        
+                        </lottie-player>
+                    </div>
+                    <div class="col-lg-6">
+                        <div id="resume">
+                            <div class="container">
+                                <ul hidden>
+                                    Page <span id="page_num"></span>
+                                    of <span id="page_count"></span>
+                                </ul>
+                                <canvas
+                                id="resumeCanvas"
+                                class="d-flex flex-column justify-content-center align-items-center mx-auto"
+                                >
+                                </canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div id="cert">
+                            <div class="container">
+                                <ul hidden>
+                                    Page <span id="page_num"></span>
+                                    of <span id="page_count"></span>
+                                </ul>
+                                <canvas
+                                id="certCanvas"
+                                class="d-flex flex-column justify-content-center align-items-center mx-auto"
+                                >
+                                </canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="contact">
+                <div
+                class="offcanvas offcanvas-start"
+                tabindex="-1"
+                id="offcanvasExample"
+                aria-labelledby="offcanvasExampleLabel"
+              >
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="container">
+                    <button
+                      type="button"
+                      class="btn-close text-reset"
+                      data-bs-dismiss="offcanvas"
+                      aria-label="Close"
+                    ></button>
+                    <div class="row justify-content-center">
+                      <div class="col-12 col-lg-10">
+                        <div class="card" style="border-radius: 1rem">
+                          <h1 class="mb-5 text-center">Contact me</h1>
+                          <form class="contactForm">
+                            <div class="row">
+                              <div class="form-outline mb-4">
+                                <div class="form-outline">
+                                  <input type="text" id="name" class="form-control" />
+                                  <label class="form-label" for="name">Name</label>
+                                </div>
+                              </div>
+                              <div class="form-outline mb-4">
+                                <div class="form-outline">
+                                  <input type="text" id="phoneNumber" class="form-control" />
+                                  <label class="form-label" for="phoneNumber">Phone Number</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-outline mb-4">
+                              <div class="form-outline">
+                                <input type="text" id="companyName" class="form-control" />
+                                <label class="form-label" for="companyName">Company Name</label>
+                              </div>
+                            </div>
+                          </div>
+            
+                            <div class="form-outline mb-4">
+                              <input type="email" id="email" class="form-control" />
+                              <label class="form-label" for="email">Email</label>
+                            </div>
+            
+                            <div class="form-outline mb-4">
+                              <textarea class="form-control" id="reason" rows="4"></textarea>
+                              <label class="form-label" for="reason">Reason for Contact</label>
+                            </div>
+            
+                            <div class="form-outline mb-4">
+                                <div class="form-outline">
+                                  <input type="text" id="honeypot" class="form-control" hidden/>
+                                </div>
+                              </div>
+
+                            <button type="submit" class="btn btn-success btn-rounded btn-block">
+                              Send
+                            </button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+        </main>
+
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <script type="text/javascript" src="assets/scripts/mdb.min.js" async defer></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="assets/scripts/app.js" async defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+</html>
