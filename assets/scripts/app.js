@@ -137,7 +137,7 @@ $(document).ready(function () {
 });
 
 // Hero text
-var words = ['t\'s a pleasure to meet you', 'I look forward to working with you', ''],
+var words = ['It\'s a pleasure to meet you', 'I look forward to working with you', 'I'],
     part,
     i = 0,
     offset = 0,
