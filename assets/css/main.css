@@ -70,7 +70,7 @@ nav {
         display: flex; /* Show the button-container on mobile */
         align-items: center;
         justify-content: space-around;
-        background-color: rgba(100, 240, 234, 1);
+        background-color: rgba(255, 240, 234, 1);
         width: 100%; /* Make the container span the entire width */
         position: fixed; /* Fixed position to stay at the top */
         top: 0; /* Stick to the top of the screen */
