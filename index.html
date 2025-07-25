@@ -1,442 +1,238 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!<![endif]-->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>David Duron</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
-        <link rel="stylesheet" href="assets/css/mdb.min.css" />
-        <link rel="stylesheet" href="assets/css/main.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<html lang="en">
 
-        <script src="assets/scripts/pdfjs/pdf.js"></script>
-    </head>
-    <body>
-        <header>
-            <!-- Navbar -->
-<nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
-    <div class="container">
-      <a class="navbar-brand" href="#"
-        >David Duron (863) 315-1851</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-mdb-toggle="collapse"
-        data-mdb-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto align-items-center">
-            <li class="nav-item">
-              <a class="nav-link mx-2" href="/assets/media/pdfs/ResumeDavidDuron.pdf" download>Resume</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mx-2" href="email.html">Sample HTML Email</a>
-            </li>
-          <li class="nav-item">
-              <a href="https://linkedin.com/in/david-duron-41a740229">LinkedIn</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- Navbar -->
-        </header>
-        
-        <main>
-            <div class="container p-4 shadow-4 rou20nded-3" style="background-color: hsl(0, 0%, 94%);">     
-                <div class="bg-image hover-overlay ripple text-center" data-mdb-ripple-color="light">
-                    <img src="assets/media/images/david/suit.png" class="img-fluid" alt="Image" style="height: 20vw;" />
-                    <a href="#!">
-                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                    </a>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>David Duron</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/scripts/pdfjs/pdf.js"></script>
+</head>
+<body>
+    <header>
+        <nav id="mobileMenu" class="hidden">
+            <div class="navbar--hamburger" onclick="toggleMenu()">
+                X
+            </div>
+                <a href="./assets/media/pdfs/ResumeDavidDuron.pdf" target="_blank" rel="noopener noreferrer"
+                    class="nav-link" role="link">
+                    Resume
+                </a>
+
+                <a href="mailto:emt2dev@gmail.com?subject=Interview&body=Hello, I'd like to schedule an interview"
+                    class="nav-link" role="link">
+                    Email
+                </a>
+
+                <a href="https://www.figma.com/design/nKvcIcjhxVbn13dXgxIamr/David-s-Portfolio?node-id=0-1&t=9FHglOqX1tWXyDoP-1"
+                    target="_blank" rel="noopener noreferrer" class="nav-link" role="link">
+                    Figma Link
+                </a>
+
+                <address class="contact-info" aria-label="Contact information">
+                    <strong>David Duron</strong><br />
+                    <a href="tel:+18633151851">(863) 315-1851</a>
+                </address>
+        </nav>
+        <nav aria-label="Primary navigation">
+            <div class="navbar--btnGroup">
+                <button id="availabilityButton" role="status" aria-pressed="true" aria-live="polite">
+                    Available
+                </button>
+
+                <a href="./assets/media/pdfs/ResumeDavidDuron.pdf" target="_blank" rel="noopener noreferrer"
+                    class="nav-link" role="link">
+                    Resume
+                </a>
+
+                <a href="mailto:emt2dev@gmail.com?subject=Interview&body=Hello, I'd like to schedule an interview"
+                    class="nav-link" role="link">
+                    Email
+                </a>
+
+                <a href="https://www.figma.com/design/nKvcIcjhxVbn13dXgxIamr/David-s-Portfolio?node-id=0-1&t=9FHglOqX1tWXyDoP-1"
+                    target="_blank" rel="noopener noreferrer" class="nav-link" role="link">
+                    Figma Link
+                </a>
+
+                <address class="contact-info" aria-label="Contact information">
+                    <strong>David Duron</strong><br />
+                    <a href="tel:+18633151851">(863) 315-1851</a>
+                </address>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="hero--container">
+            <div class="hero--text">
+                <div class="navbar--hamburger" onclick="toggleMenu()">
+                    ☰
                 </div>
-                <div class="welcome-text-container text-center pb-3 mt-3">                                
-                    <div class="hero-container">
-                        <div class="hero-text">
-                        </div>
-                    </div>
-                    <p class="lead">Hello! I'm a passionate software developer with expertise in a variety of technologies, including .NET, React, Vue, Angular, and Java, primarily in the healthtech and insurance industry. I live in beautiful Lakeland, FL.</p> <br /> <p class="lead">Throughout my career, I’ve developed a strong proficiency in writing tests and comprehensive documentation. I take pride in successfully guiding applications from development to production as most of experience is in the startup space.</p>
-                    <p class="lead">I excel at meeting deadlines, communicating code clearly, and pinpointing challenges while delivering innovative solutions.</p>
+                <h1>Hello there,</h1>
+                <p>
+                    I’m David, a normal dude who saved lives and recipient of an award from President Obama.
+                    I currently live in Lakeland, Florida, a beautiful and bustling town that is rich in history
+                    and its offerings to the ever-changing world.
+                </p>
+                <p>
+                    I moved from Virginia Beach, Virginia, a coastal city that is military-friendly and home to the
+                    world’s largest Navy base,
+                    to retire from my previous career as an Emergency Medical Technician (EMT) and pursue a new venture:
+                    software development.
+                    I own my own company called <strong>Pelican Studios, LLC</strong> where I work on the software I
+                    dreamed about as an EMT.
+                </p>
+                <p>
+                    There were some things I noticed as an EMT that could use improvement, and becoming a developer
+                    would allow me to create software
+                    that could implement the changes and save lives.
+                    You’ll notice throughout my portfolio that I have a large focus on helping others and
+                    self-improvement.
+                </p>
+                <p>
+                    Thank you for reviewing my portfolio. I hope we can connect to discuss how my proven track record
+                    can benefit your projects.
+                </p>
+            </div>
+
+            <img src="./assets/media/images/david/davidswordcloud.svg" alt="word-cloud" />
+            <img src="./assets/media/images/david/suit.png" alt="david-in-suit" />
+        </div>
+        <h2>
+            <u>
+                WORK HISTORY
+            </u>
+        </h2>
+        <div class="workHistory--container">
+            <div class="workHistory--images--container">
+                <div class="workHistory--images--card">
+                    <p>Firefighter 2009 - 2012</p>
+                    <img src="./assets/media/images/david/fd1.JPG"
+                        alt="bossier-parish-fire-district-1-at-17-years-old" />
+                </div>
+                <div class="workHistory--images--card">
+                    <p>Emergency Medical Technician 2012 - 2018</p>
+                    <img src="./assets/media/images/david/ems.png" alt="ems-cartoon" />
+                </div>
+                <div class="workHistory--images--card">
+                    <p>Software Developer 2018 - Present</p>
+                    <img src="./assets/media/images/david/davidBlack.png" alt="software-developer" />
                 </div>
             </div>
-            <section id="tech">
-                <h5>Here is the technologies that I've used.</h5>
-                <p>Currently I use Java, Angular, SQL, IBMi at work; and Laravel, MySQL, React (InertiaJS) for my business (self-hosted).</p>
-                <ul>
-                    <li>Vue (2, 3)</li>
-                    <li>Angular</li>
-                    <li>DotNet MVC, API, 6,7,8</li>
-                    <li>DotNet WPF, Winforms, 6,7,8</li>
-                    <li>Java Spring, SpringBoot, Android, Gradle</li>
-                    <li>Kotlin Android, Compose-Desktop</li>
-                    <li>SwiftUI</li>
-                    <li>Node.js</li>
-                    <li>Go</li>
-                    <li>Redis</li>
-                    <li>MongoDB</li>
-                    <li>MySQL</li>
-                    <li>Microsoft SQL Server</li>
-                    <li>Team Foundation Server</li>
-                    <li>Peppermint OS, Ubuntu, Debian, Devuan, Linux</li>
-                    <li>Windows</li>
-                    <li>Docker</li>
-                    <li>Apache Server</li>
-                    <li>AWS</li>
-                    <li>Azure</li>
-                    <li>Azure Active Directory/Entra</li>
-                </ul>
-            </section>
-            <section id="work">
-                <div class="container text-center">
-                    <h1>Work History</h1>
-                    <div class="col-lg-12 mb-4 d-flex justify-content-center">
-                        <lottie-player src="assets/media/lotties/work.json" background="transparent" style="width: 50vw; height: 35vw;" speed="0.5" loop autoplay>
-                        
-                        </lottie-player>
+        </div>
+        <h2>
+            <u>
+                PROJECT HISTORY
+            </u>
+        </h2>
+        <div class="projectHistory--container">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <p>Workers Comp Online Quote</p>
+                        <h2>Summit Holdings, LLC</h2>
+                        <p>03/16/2025 - 07/23/2025</p>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-3 mb-4">
-                            <div class="card h-100 text-center">
-                                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                                <img src="assets/media/images/david/fd1.JPG" class="img-fluid" />
-                                <a href="#!">
-                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                                </a>
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">Firefighter and EMT</h5>
-                                    <h6 class="card-subtitle mb-2 text-muted">Bossier Parish Fire District One</h6>
-                                    <p class="card-text">
-                                        <pre style="white-space: pre-line;">
-                                            I started my adult-life as a Firefighter/EMT in Haughton, LA. Here, I learned what work-ethic means and it made me into the person that I am today. In this position, I learned from the best, and helped implement policies, and was awarded the Presidential Volunteer Service Award (Gold) from President Barack Obama.
-                                        </pre>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 mb-4">
-                            <div class="card h-100 text-center">
-                                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                                <img src="assets/media/images/david/ems2.png" class="img-fluid" />
-                                <a href="#!">
-                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                                </a>
-                                </div>
-                                <div class="card-body">
-                                <h5 class="card-title">Emergency Medical Technician</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Veteran's Affairs, Federal Contractor</h6>
-                                <p class="card-text">
-                                    <pre style="white-space: pre-line;">
-                                        I worked in this position from September 2011 to June 2018. In this position I worked with, and trained others, maintaing a professional environment. Here, I worked with the team that reduced veteran suicides by implementing processes to reduce appointment wait times.
-                                    </pre>
-                                </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-4">
-                            <div class="card h-100 text-center">
-                                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                                <img src="assets/media/images/david/davidBlue.png" class="img-fluid" />
-                                <a href="#!">
-                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                                </a>
-                                </div>
-                                <div class="card-body">
-                                <h5 class="card-title">Software Developer</h5>
-                                <p class="card-text">
-                                    <pre style="white-space: pre-line;">
-                                        In 2018, I began my new career as a software developer in the healthtech space in an apprenticeship program where I learned to hold my own as an individual contributor. As time went on, my skills and knowledge increased, providing a healthy environment to grow professionally and personnaly.
-                                    </pre>
-                                </p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="flip-card-back">
+                        <p>Application Engineer</p>
+                        <p>Java, Spring, Websphere, IBMI AS400, DB2, Angular</p>
                     </div>
                 </div>
-            </section>  
-            
-            <section id="hobbies">
-                <div class="container text-center">
-                <h1 class="pt-3 mb-3">Hobbies & Fun</h1>
-                    <div class="row">
-                        <div class="col-lg-3 mb-4 ">
-                            <div class="card h-100 text-center">
-                                <div class="bg-image hover-overlay ripple d-flex justify-content-center" data-mdb-ripple-color="light">
-                                    <lottie-player class="img-fluid " src="assets/media/lotties/gym.json" background="transparent" speed="0.5" loop autoplay>
-                            
-                                    </lottie-player>
-                                <a href="#!">
-                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                                </a>
-                                </div>
-                                <div class="card-body">
-                                <h5 class="card-title">I Lift Weights</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">And Run For My Life Afterwards!</h6>
-                                <p class="card-text">
-                                    <pre style="white-space: pre-line;">
-                                        I've lost one-hundred and enjoy the grind.
-                                    </pre>
-                                </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 mb-4 ">
-                            <div class="card h-100 text-center">
-                                <div class="bg-image hover-overlay ripple d-flex justify-content-center" data-mdb-ripple-color="light">
-                                    <lottie-player class="img-fluid " src="assets/media/lotties/cooking.json" background="transparent" speed="0.5" loop autoplay>
-                            
-                                    </lottie-player>
-                                <a href="#!">
-                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                                </a>
-                                </div>
-                                <div class="card-body">
-                                <h5 class="card-title">I Cook</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Ask me about my mac and cheese recipe!</h6>
-                                <p class="card-text">
-                                    <pre style="white-space: pre-line;">
-                                        Cooking is a lot like software development but the reward is available faster!
-                                    </pre>
-                                </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 mb-4 ">
-                            <div class="card h-100 text-center">
-                                <div class="bg-image hover-overlay ripple d-flex justify-content-center" data-mdb-ripple-color="light">
-                                    <lottie-player class="img-fluid " src="assets/media/lotties/fun.json" background="transparent" speed="0.5" loop autoplay>
-                            
-                                    </lottie-player>
-                                <a href="#!">
-                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                                </a>
-                                </div>
-                                <div class="card-body">
-                                <h5 class="card-title">I love my raspberry pi and a homelab</h5>
-                                <p class="card-text">
-                                    <pre style="white-space: pre-line;">
-                                        Here I like to practice my networking and learn new things associated with tech.
-                                    </pre>
-                                </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 mb-4 ">
-                            <div class="card h-100 text-center">
-                                <div class="bg-image hover-overlay ripple d-flex justify-content-center" data-mdb-ripple-color="light">
-                                    <lottie-player class="img-fluid " src="assets/media/lotties/study.json" background="transparent" speed="0.5" loop autoplay>
-                            
-                                    </lottie-player>
-                                <a href="#!">
-                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                                </a>
-                                </div>
-                                <div class="card-body">
-                                <h5 class="card-title">I Keep Up With the Jones'</h5>
-                                <p class="card-text">
-                                    <pre style="white-space: pre-line;">
-                                        I'm currently studying to go back to college and finish the degree program.
-                                    <br />
-                                        Hillsborough Community College, located in Tampa, FL
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <p>Pelican Journal</p>
+                        <h2>Pelican Studios, LLC</h2>
+                        <p>02/2025 - 06/2025</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Owner</p>
+                        <p>Laravel, React, InertiaJS, MySQL, Tailwindcss</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <p>Electronic Health Record</p>
+                        <h2>Advanced Correctional Healthcare</h2>
+                        <p>10/2023 - 05/2024</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Software Developer</p>
+                        <p>.Net 6 Web API, Azure MSSQL Server, Redis, Azure MySQL, Vue 2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <p>Customer Relations Management</p>
+                        <h2>Summit Holdings, LLC</h2>
+                        <p>08/2018 - 03/2023</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Software Developer</p>
+                        <p>.Net 6 Web API, Angular, MySQL, LAMP</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <p>Pelican Ambulance Software Suite</p>
+                        <h2>Pelican Studios, LLC</h2>
+                        <p>08/2025 - Est 12/2025</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Owner</p>
+                        <p>JavaFX, Sqlite, Laravel, Vue, InertiaJS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
 
-                                    I plan to continue my education and obtain a bachelor's degree in compute science.
-                                    </pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="projects">
-                <div class="container text-center">
-                    <h1>Project History</h1>
-                    <div class="col-lg-12 mb-4 d-flex justify-content-center">
-                        <lottie-player src="assets/media/lotties/showcase.json" background="transparent" style="width: 40vw; height: 35vw;" speed="0.5" loop autoplay>
-                        </lottie-player>
-                    </div>
-                    <div class="row pt-5 mb-4">
-                        <div class="col-lg-4 mb-4">
-                            <div class="card">
-                                <h5 class="card-title">Application Engineer</h5>
-                                <div class="bg-image hover-overlay ripple pt-3" data-mdb-ripple-color="light">
-                                    <a href="!#"></a>
-                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                                    </a>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">I am currently part of an awesome team of experienced developers where we work on a mid-range (Java, Angular, IBMi).
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mb-4">
-                            <div class="card">
-                                <h5 class="card-title">E-commerce / Telehealth Platform</h5>
-                                <div class="bg-image hover-overlay ripple pt-3" data-mdb-ripple-color="light">
-                                    <img src="assets/media/images/projects/quello.png" width="100%" class="img-fluid"/>
-                                    <a href="!#"></a>
-                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                                    </a>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">I was formerly a part of a startup of a telehealth and ecommerce platform that sold weight-loss medications (Vue 2, Azure, MSSSQL Server, DotNet)
-                                    </p>
-                                    <a href="https://www.quellohealth.com/" class="btn btn-primary">More about Quello here</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mb-4">
-                            <div class="card">
-                                <h5 class="card-title">Online Journaling Platform</h5>
-                                <div class="bg-image hover-overlay ripple pt-3" data-mdb-ripple-color="light">
-                                    <img src="assets/media/images/projects/nannyplus.jpg" width="100%" class="img-fluid"/>
-                                    <a href="!#"></a>
-                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                                    </a>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text"> (Completed on June 21, 2025 (Launching soon!))</p>
-                                    <p class="card-text">This is the web's only journaling platform that encrypts journal entries for storage; I built. (Laravel, Mac, Cloudflare, React 19, Inertia, MySQL)
-                                    </p>
-                                    <!-- <a href="https://www.candyrolltech.com/" class="btn btn-secondary"></a> -->
-                                </div>
-                            </div>
-                        </div>
-                        <!-- <div class="col-lg-4 mb-4">
-                            <div class="card">
-                                <h5 class="card-title">Ambulance Dispatching</h5>
-                                <div class="bg-image hover-overlay ripple pt-3" data-mdb-ripple-color="light">
-                                    <img src="assets/media/images/projects/dispatcher.webp" width="100%" class="img-fluid"/>
-                                    <a href="!#"></a>
-                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                                    </a>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">I am creating a modern EMS dispatching system that will be a part of a software ecosystem. There are two versions: a web app written in Vue 3 and .NET 8, and a WPF version.
-                                        <br />This is a personal project
-                                    </p>
-                                    <a href="https://candyrolltech.com/" class="btn btn-primary">Learn more here</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mb-4">
-                            <div class="card">
-                                <h5 class="card-title">EMS E Patient Care Report</h5>
-                                <div class="bg-image hover-overlay ripple pt-3" data-mdb-ripple-color="light">
-                                    <img src="assets/media/images/projects/ems%20crew.webp" width="100%" class="img-fluid"/>
-                                    <a href="!#"></a>
-                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                                    </a>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">I am creating a modern EMS ePCR that will be NEMSIS compliant that will be a part of a software ecosystem. It is written in .NET WPF, Sqlite with plans for linux and Tablet (IOS and Android) ports.
-                                        <br />This is a personal project
-                                    </p>
-                                    <a href="https://candyrolltech.com/" class="btn btn-primary">Learn more here</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mb-4">
-                            <div class="card">
-                                <h5 class="card-title">EMS Quality Assurance And Medical Billing</h5>
-                                <div class="bg-image hover-overlay ripple pt-3" data-mdb-ripple-color="light">
-                                    <img src="assets/media/images/projects/billing.webp" width="100%" class="img-fluid"/>
-                                    <a href="!#"></a>
-                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                                    </a>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">I am creating a modern EMS ePCR that will be NEMSIS compliant that will be a part of a software ecosystem. It is written in Angular .Net
-                                        <br />This is a personal project
-                                    </p>
-                                    <a href="https://candyrolltech.com/" class="btn btn-primary">Learn more here</a>
-                                </div>
-                            </div>
-                        </div> -->
-                        <div class="col-lg-4 mb-4">
-                            <div class="card">
-                                <h5 class="card-title">Electronic Health Record</h5>
-                                <div class="bg-image hover-overlay ripple pt-3" data-mdb-ripple-color="light">
-                                <img src="assets/media/images/projects/ach_logo.png" width="100%" class="img-fluid"/>
-                                    <a href="!#"></a>
-                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                                </a>
-                                </div>
-                                <div class="card-body">
-                                <p class="card-text">I was the sole developer for Advanced Correctional Healthcare's new EHR system fulfilling the MVP requirements and deployed into production; this was a startup environment. (Vue 3, DotNet)
-                                    <br />
-                                    * I am not employed by Advanced Correctional Healthcare
-                                </p>
-                                <a href="https://www.advancedch.com/" class="btn btn-primary">View here</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mb-4">
-                        <div class="card">
-                            <h5 class="card-title">Better you with Sabrina</h5>
-                            <a href="https://www.instagram.com/betteryoubysabrina/">Instagram Link</a>
-                            <div class="bg-image hover-overlay ripple pt-3" data-mdb-ripple-color="light">
-                            <img src="assets/media/images/projects/sabrina/main.png" width="50%" class="img-fluid"/>
-                                <a href="!#"></a>
-                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                            </a>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-text">I created a starter landing page that will allow this mind training coach to slowly integrate external resources to this app. (Vue 3, DotNet)</p>
-                                <a href="sabrina/" class="btn btn-primary">View here</a>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mb-4">
-                            <div class="card">
-                                <h5 class="card-title">Balentine Ambulance Service</h5>
-                                <div class="bg-image hover-overlay ripple pt-3" data-mdb-ripple-color="light">
-                                <img src="assets/media/images/projects/ambulance/logo.png" width="50%" class="img-fluid"/>
-                                    <a href="!#"></a>
-                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                                </a>
-                                </div>
-                                <div class="card-body">
-                                <p class="card-text">I created a modernized landing page for Balentine ambulance company and donated the code to them. (Angular, DotNet)</p>
-                                <a href="ambulance/" class="btn btn-primary">View here</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mb-4">
-                            <div class="card">
-                                <h5 class="card-title">CRM and LMS</h5>
-                                <div class="bg-image hover-overlay ripple pt-3" data-mdb-ripple-color="light">
-                                <img src="assets/media/images/projects/can/can2.png" width="50%" class="img-fluid"/>
-                                    <a href="!#"></a>
-                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                                </a>
-                                </div>
-                                <div class="card-body">
-                                <p class="card-text">Here is one of the websites that the company used internally for customer-relationship management and also send to clients who are interested in purchasing training; this was a startup environment  (Angular, DotNet)</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                                    Illustration by <a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA">Icons 8</a> from <a href="https://icons8.com/illustrations">Ouch!</a>
-                </div>
-            </section>
-        </main>
+    <script>
+        function updateButtonAvailability() {
+            const now = new Date();
 
-        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-        <script type="text/javascript" src="assets/scripts/mdb.min.js" async defer></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    </body>
+            const options = { timeZone: 'America/New_York', hour: 'numeric', hour12: false };
+            const estHour = parseInt(new Intl.DateTimeFormat('en-US', options).format(now));
+
+            const button = document.getElementById('availabilityButton');
+
+            if (estHour < 8 || estHour >= 18) {
+                button.style.backgroundColor = '#9b111e';
+                button.style.color = 'aliceblue';
+                button.textContent = 'Not Available';
+
+            } else {
+                button.style.backgroundColor = '#50C878';
+                button.style.color = '#000';
+                button.textContent = 'Available';
+            }
+        }
+
+        updateButtonAvailability();
+
+        setInterval(updateButtonAvailability, 15 * 60 * 1000);
+    </script>
+
+</body>
+
 </html>
