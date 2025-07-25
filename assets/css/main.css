@@ -1,6 +1,6 @@
 body {
     font-family: "Inter", sans-serif;
-    background-color: #f7f7f7;
+    background-color: #a0c2ab;
     margin: 0 5rem;
     padding: 0;
 }
@@ -34,7 +34,7 @@ nav {
 .navbar--btnGroup > button {
   font-size: 16px;
   font-weight: 500;
-  background-color: #f7f7f7;
+  background-color: #405848;
   border-radius: 3rem;
   border-top: none;
   border-left: none;
@@ -101,12 +101,12 @@ nav {
 .hero--text {
   flex: 1;
   max-width: 88%;
-  background-color: #f9f9f9;
+  background-color: #bbb;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
+  color: #000;
   line-height: 1;
   text-align: center;
 }
