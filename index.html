@@ -1,249 +1,443 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>David Duron</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="shortcut icon" href="./assets/media/favicon.ico" type="image/x-icon">
-</head>
-<body>
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/media/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
     <header>
-        <nav id="mobileMenu" class="hidden">
-            <div class="navbar--hamburger" onclick="toggleMenu()">
-                X
-            </div>
-                <a href="./assets/media/pdfs/ResumeDavidDuron.pdf" target="_blank" rel="noopener noreferrer"
-                    class="nav-link" role="link">
-                    Resume
-                </a>
+      <nav id="mobileMenu" class="hidden">
+        <div class="navbar--hamburger" onclick="toggleMenu()">X</div>
+        <a
+          href="./assets/media/pdfs/ResumeDavidDuron.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="nav-link"
+          role="link"
+        >
+          Resume
+        </a>
 
-                <a href="mailto:emt2dev@gmail.com?subject=Interview&body=Hello, I'd like to schedule an interview"
-                    class="nav-link" role="link">
-                    Email
-                </a>
+        <a
+          href="mailto:emt2dev@gmail.com?subject=Interview&body=Hello, I'd like to schedule an interview"
+          class="nav-link"
+          role="link"
+        >
+          Email
+        </a>
 
-                <a href="https://www.figma.com/design/nKvcIcjhxVbn13dXgxIamr/David-s-Portfolio?node-id=0-1&t=9FHglOqX1tWXyDoP-1"
-                    target="_blank" rel="noopener noreferrer" class="nav-link" role="link">
-                    Figma Link
-                </a>
+        <a
+          href="https://www.figma.com/design/nKvcIcjhxVbn13dXgxIamr/David-s-Portfolio?node-id=0-1&t=9FHglOqX1tWXyDoP-1"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="nav-link"
+          role="link"
+        >
+          Figma Link
+        </a>
 
-                <address class="contact-info" aria-label="Contact information">
-                    <strong>David Duron</strong><br />
-                    <a href="tel:+18633151851">(863) 315-1851</a>
-                </address>
-        </nav>
-        <nav aria-label="Primary navigation">
-            <div class="navbar--btnGroup">
-                <button id="availabilityButton" role="status" aria-pressed="true" aria-live="polite">
-                    Available
-                </button>
+        <address class="contact-info" aria-label="Contact information">
+          <strong>David Duron</strong><br />
+          <a href="tel:+18633151851">(863) 315-1851</a>
+        </address>
+      </nav>
+      <nav aria-label="Primary navigation">
+        <div class="navbar--btnGroup">
+          <button
+            id="availabilityButton"
+            role="status"
+            aria-pressed="true"
+            aria-live="polite"
+          >
+            Available
+          </button>
 
-                <a href="./assets/media/pdfs/ResumeDavidDuron.pdf" target="_blank" rel="noopener noreferrer"
-                    class="nav-link" role="link">
-                    Resume
-                </a>
+          <a
+            href="./assets/media/pdfs/ResumeDavidDuron.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="nav-link"
+            role="link"
+          >
+            Resume
+          </a>
 
-                <a href="mailto:emt2dev@gmail.com?subject=Interview&body=Hello, I'd like to schedule an interview"
-                    class="nav-link" role="link">
-                    Email
-                </a>
+          <a
+            href="mailto:emt2dev@gmail.com?subject=Interview&body=Hello, I'd like to schedule an interview"
+            class="nav-link"
+            role="link"
+          >
+            Email
+          </a>
 
-                <a href="https://www.figma.com/design/nKvcIcjhxVbn13dXgxIamr/David-s-Portfolio?node-id=0-1&t=9FHglOqX1tWXyDoP-1"
-                    target="_blank" rel="noopener noreferrer" class="nav-link" role="link">
-                    Figma Link
-                </a>
+          <a
+            href="https://www.figma.com/design/nKvcIcjhxVbn13dXgxIamr/David-s-Portfolio?node-id=0-1&t=9FHglOqX1tWXyDoP-1"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="nav-link"
+            role="link"
+          >
+            Figma Link
+          </a>
 
-                <address class="contact-info" aria-label="Contact information">
-                    <strong>David Duron</strong><br />
-                    <a href="tel:+18633151851">(863) 315-1851</a>
-                </address>
-            </div>
-        </nav>
+          <address class="contact-info" aria-label="Contact information">
+            <strong>David Duron</strong><br />
+            <a href="tel:+18633151851">(863) 315-1851</a>
+          </address>
+        </div>
+      </nav>
     </header>
     <main>
-        <div class="hero--container">
-            <div class="hero--text">
-                <div class="navbar--hamburger" onclick="toggleMenu()">
-                    ☰
-                </div>
-                <h1>Hello there,</h1>
-                <p>
-                    I’m David, a normal dude who saved lives and recipient of an award from President Obama.
-                    I currently live in Lakeland, Florida, a beautiful and bustling town that is rich in history
-                    and its offerings to the ever-changing world.
-                </p>
-                <p>
-                    I moved from Virginia Beach, Virginia, a coastal city that is military-friendly and home to the
-                    world’s largest Navy base,
-                    to retire from my previous career as an Emergency Medical Technician (EMT) and pursue a new venture:
-                    software development.
-                </p>
-                <p>
-                    There were some things I noticed as an EMT that could use improvement, and becoming a developer
-                    would allow me to create software
-                    that could implement the changes and save lives.
-                    You’ll notice throughout my portfolio that I have a large focus on helping others and
-                    self-improvement.
-                </p>
-                <p>
-                    Thank you for reviewing my portfolio. I hope we can connect to discuss how my proven track record
-                    can benefit your projects.
-                </p>
-            </div>
+      <div class="hero--container">
+        <div class="hero--text">
+          <div class="navbar--hamburger" onclick="toggleMenu()">☰</div>
+          <h1>Hello there,</h1>
+          <p>
+            I’m David, a normal dude who saved lives and recipient of an award
+            from President Obama. I currently live in Lakeland, Florida, a
+            beautiful and bustling town that is rich in history and its
+            offerings to the ever-changing world.
+          </p>
+          <p>
+            I moved from Virginia Beach, Virginia, a coastal city that is
+            military-friendly and home to the world’s largest Navy base, to
+            retire from my previous career as an Emergency Medical Technician
+            (EMT) and pursue a new venture: software development.
+          </p>
+          <p>
+            There were some things I noticed as an EMT that could use
+            improvement, and becoming a developer would allow me to create
+            software that could implement the changes and save lives. You’ll
+            notice throughout my portfolio that I have a large focus on helping
+            others and self-improvement.
+          </p>
+          <p>
+            Thank you for reviewing my portfolio. I hope we can connect to
+            discuss how my proven track record can benefit your projects.
+          </p>
+        </div>
 
-            <img src="./assets/media/images/david/davidswordcloud.svg" alt="word-cloud" />
-            <img src="./assets/media/images/david/suit.png" alt="david-in-suit" />
+        <img
+          src="./assets/media/images/david/davidswordcloud.svg"
+          alt="word-cloud"
+        />
+        <img src="./assets/media/images/david/suit.png" alt="david-in-suit" />
+      </div>
+      <h2>
+        <u> WORK HISTORY </u>
+      </h2>
+      <div class="workHistory--container">
+        <div class="workHistory--images--container">
+          <div class="workHistory--card">
+            <a
+              href="https://pelican-studios.com"
+              target="_blank"
+              class="work-card-link"
+            >
+              <div class="work-card-image">
+                <img
+                  src="./assets/media/images/david/fd1.JPG"
+                  alt="Pelican Studios Logo"
+                />
+              </div>
+              <div class="work-card-info">Firefighter</h3>
+                <p class="work-card-dates">2009 - 2012</p>
+              </div>
+            </a>
+          </div>
+          <div class="workHistory--card">
+            <a
+              href="https://pelican-studios.com"
+              target="_blank"
+              class="work-card-link"
+            >
+              <div class="work-card-image">
+                <img
+                  src="./assets/media/images/david/ems.png"
+                  alt="Pelican Studios Logo"
+                />
+              </div>
+              <div class="work-card-info">Emergency Medical Technician</h3>
+                <p class="work-card-dates">2012 - 2018</p>
+              </div>
+            </a>
+          </div>
+          <div class="workHistory--card">
+            <a
+              href="https://pelican-studios.com"
+              target="_blank"
+              class="work-card-link"
+            >
+              <div class="work-card-image">
+                <img
+                  src="./assets/media/images/david/davidBlack.png"
+                  alt="Pelican Studios Logo"
+                />
+              </div>
+              <div class="work-card-info">
+                <h3 class="work-card-title">Full-stack Developer</h3>
+                <p class="work-card-dates">2018 – Present</p>
+              </div>
+            </a>
+          </div>
+          <div class="workHistory--card">
+            <a
+              href="https://pelican-studios.com"
+              target="_blank"
+              class="work-card-link"
+            >
+              <div class="work-card-image">
+                <img
+                  src="./assets/media/images/projects/ps-logo.png"
+                  alt="Pelican Studios Logo"
+                />
+              </div>
+              <div class="work-card-info">
+                <h3 class="work-card-title">Pelican Studios, LLC</h3>
+                <p class="work-card-role">Owner</p>
+                <p class="work-card-dates">2025 – Present</p>
+                <p class="work-card-cta">Click to visit website</p>
+              </div>
+            </a>
+          </div>
         </div>
-        <h2>
-            <u>
-                WORK HISTORY
-            </u>
-        </h2>
-        <div class="workHistory--container">
-            <div class="workHistory--images--container">
-                <div class="workHistory--images--card">
-                    <p>Firefighter 2009 - 2012</p>
-                    <img src="./assets/media/images/david/fd1.JPG"
-                        alt="bossier-parish-fire-district-1-at-17-years-old" />
-                </div>
-                <div class="workHistory--images--card">
-                    <p>Emergency Medical Technician 2012 - 2018</p>
-                    <img src="./assets/media/images/david/ems.png" alt="ems-cartoon" />
-                </div>
-                <div class="workHistory--images--card">
-                    <p>Software Developer 2018 - Present</p>
-                    <img src="./assets/media/images/david/davidBlack.png" alt="software-developer" />
-                </div>
-            </div>
+      </div>
+      <section class="project-history">
+        <h2 class="section-title">Project History</h2>
+        <div class="project-samples">
+          <h3 class="samples-title">Samples</h3>
+          <ul class="samples-list">
+            <li>
+              <a href="https://emt2dev.github.io/ambulance/" target="_blank">
+                Website donated to Balentine Ambulance Service
+              </a>
+            </li>
+            <li>
+              <a href="https://emt2dev.github.io/ambulance/" target="_blank">
+                Website made for Mi Casita Mexican Restaurant
+              </a>
+            </li>
+            <li class="sample-card">
+              <a href="#" target="_blank">
+                <img
+                  src="./assets/media/images/projects/can/can2.png"
+                  alt="CRM for Curved Arrow Networks, LLC"
+                />
+                <p>CRM for Curved Arrow Networks, LLC</p>
+              </a>
+            </li>
+          </ul>
         </div>
-        <h2>
-            <u>
-                PROJECT HISTORY
-            </u>
-        </h2>
         <div class="projectHistory--container">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <p>Pelican Ambulance Software Suite</p>
-                        <h2>Pelican Studios, LLC</h2>
-                        <p>AUG 2025 - Est compl. DEC 2025</p>
-                    </div>
-                    <div class="flip-card-back">
-                        <p>Owner</p>
-                        <p>JavaFX, Sqlite, Laravel, React, InertiaJS</p>
-                    </div>
-                </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h3 class="project-title">Pelican Ambulance Software Suite</h3>
+                <h4 class="company-name">Pelican Studios, LLC</h4>
+                <p class="role">Owner / Full-stack Developer</p>
+                <p class="date">(Sep 2025 – Current)</p>
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  This ambulance software suite includes an "all in one"
+                  application that allows EMS Agencies to have full control over
+                  the revenue cycle: dispatch, billing, ePCR, and a few
+                  additional features.
+                </p>
+                <p>
+                  Web: Laravel 12, InertiaJS, Vue <br />
+                  Mobile / Tablet: Kotlin and Swift
+                </p>
+              </div>
             </div>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <p>Workers Comp Online Quote</p>
-                        <h2>Summit Holdings, LLC</h2>
-                        <p>MAR 2025 - JUL 2025</p>
-                    </div>
-                    <div class="flip-card-back">
-                        <p>Application Engineer</p>
-                        <p>Java, Spring, Websphere, IBMI AS400, DB2, Angular</p>
-                    </div>
-                </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h3 class="project-title">Workers Comp Online Quote</h3>
+                <h4 class="company-name">Summit Holdings, LLC</h4>
+                <p class="role">Application Engineer</p>
+                <p class="date">(MAR 2025 - JUL 2025)</p>
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  In this role, I was a part of a team that was responsible for
+                  rewriting a Legacy application for Workers Comp quotes; this
+                  team had been working on this rewrite for ten years and due to
+                  my efforts, this application was ready for user acceptance
+                  testing in August 2025.
+                </p>
+                <p>Java, Spring, Websphere, IBMI AS400, DB2, Angular</p>
+              </div>
             </div>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <p>Pelican Journal</p>
-                        <h2>Pelican Studios, LLC</h2>
-                        <p>FEB 2025 - JUN 2025</p>
-                    </div>
-                    <div class="flip-card-back">
-                        <p>Owner</p>
-                        <p>Laravel, React, InertiaJS, MySQL, Tailwindcss</p>
-                    </div>
-                </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h3 class="project-title">Pelican Journal</h3>
+                <h4 class="company-name">Pelican Studios, LLC</h4>
+                <p class="role">Owner</p>
+                <p class="date">(JUL 2025 - CURRENT)</p>
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  This is a Saas that I own, and created, for B2C with B2B
+                  white-label capabilities
+                </p>
+                <p>Laravel, React, InertiaJS, MySQL, Tailwindcss</p>
+              </div>
             </div>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <p>quellohealth.com</p>
-                        <h2>Diamond Drugs, LLC</h2>
-                        <p>JUN 2024 - MAR 2025</p>
-                    </div>
-                    <div class="flip-card-back">
-                        <p>Software Developer</p>
-                        <p>.Net Web API, Azure Functions, MSSQL Server, Vue 2, React, PrimeVue, Bootstrap, Authorize.net</p>
-                    </div>
-                </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h3 class="project-title">Quello Health</h3>
+                <h4 class="company-name">Diamond Drugs, LLC</h4>
+                <p class="role">Full-stack Developer</p>
+                <p class="date">(JUN 2024 - MAR 2025)</p>
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  This is a multi-tenant e-commerce platform (selling compounded
+                  semaglutide due to FDA shortage) with telehealth
+                  functionality, pharmacy ordering integration, physician
+                  network integration.
+                </p>
+                <p>
+                  .Net Web API with microservices architecture, MSSQL Server,
+                  Vue 2, React, PrimeVue, Bootstrap, Authorize.net
+                </p>
+              </div>
             </div>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <p>Electronic Health Record</p>
-                        <h2>Advanced Correctional Healthcare</h2>
-                        <p>OCT 2023 - MAY 2024</p>
-                    </div>
-                    <div class="flip-card-back">
-                        <p>Software Developer</p>
-                        <p>.Net 6 Web API, Azure MSSQL Server, Redis, Azure MySQL, React, Vue 2</p>
-                    </div>
-                </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h3 class="project-title">Electronic Health Record</h3>
+                <h4 class="company-name">Advanced Correctional Healthcare</h4>
+                <p class="role">Full-stack Developer</p>
+                <p class="date">(OCT 2023 - MAY 2024)</p>
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  This was a project-based role where I inherited a legacy
+                  application and a half-built application (2 years of
+                  development); the company hired me to bring this project into
+                  production to honor upcoming SLAs.
+                </p>
+                <p>
+                  .Net 6 Web API, Azure MSSQL Server, Redis, Azure MySQL, React,
+                  Vue 2
+                </p>
+              </div>
             </div>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <p>Customer Relations Management</p>
-                        <h2>Curved Arrow Networks, LLC</h2>
-                        <p>AUG 2018 - MAR 2023</p>
-                    </div>
-                    <div class="flip-card-back">
-                        <p>Software Developer</p>
-                        <p>.Net 6 Web API, React, Angular, MySQL, LAMP</p>
-                    </div>
-                </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h3 class="project-title">PPO / CMO Ordering</h3>
+                <h4 class="company-name">BroadPath Solutions, LLC</h4>
+                <p class="date">(NOV 2021 - FEB 2022)</p>
+              </div>
+              <div class="flip-card-back">
+                <p>This was a project-based role.</p>
+              </div>
             </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h3 class="project-title">Maryland SNAP Benefits</h3>
+                <h4 class="company-name">ICF International Inc.</h4>
+                <p class="date">(JUN 2023 - JUL 2023)</p>
+              </div>
+              <div class="flip-card-back">
+                <p>This was a project-based role.</p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h3 class="project-title">Canzell CRM</h3>
+                <h4 class="company-name">Canzell Realty</h4>
+                <p class="role">Software Development Consultant</p>
+                <p class="date">(MAR 2023)</p>
+              </div>
+              <div class="flip-card-back">
+                <p>This was a consultant role.</p>
+                <p>Laravel, Postgres, AWS S3, Vue 2, Vuex</p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h3 class="project-title">Customer Relations Management</h3>
+                <h4 class="company-name">Curved Arrow Networks, LLC</h4>
+                <p class="role">Full-stack Developer</p>
+                <p class="date">(AUG 2018 - MAR 2023)</p>
+              </div>
+              <div class="flip-card-back">
+                <p>Worked on a CRM and a tele-health alternativate.</p>
+                <p>.Net 6 Web API, React, Angular, MySQL, LAMP</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
     </main>
     <script>
-        function toggleMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
-        }
+      function toggleMenu() {
+        const menu = document.getElementById("mobileMenu");
+        menu.classList.toggle("hidden");
+      }
     </script>
 
     <script>
-        function updateButtonAvailability() {
-            const now = new Date();
+      function updateButtonAvailability() {
+        const now = new Date();
 
-            const options = { timeZone: 'America/New_York', hour: 'numeric', hour12: false };
-            const estHour = parseInt(new Intl.DateTimeFormat('en-US', options).format(now));
+        const options = {
+          timeZone: "America/New_York",
+          hour: "numeric",
+          hour12: false,
+        };
+        const estHour = parseInt(
+          new Intl.DateTimeFormat("en-US", options).format(now)
+        );
 
-            const button = document.getElementById('availabilityButton');
+        const button = document.getElementById("availabilityButton");
 
-            if (estHour < 8 || estHour >= 18) {
-                button.style.backgroundColor = '#9b111e';
-                button.style.color = 'aliceblue';
-                button.textContent = 'Not Available';
-
-            } else {
-                button.style.backgroundColor = '#50C878';
-                button.style.color = '#000';
-                button.textContent = 'Available';
-            }
+        if (estHour < 8 || estHour >= 18) {
+          button.style.backgroundColor = "#9b111e";
+          button.style.color = "aliceblue";
+          button.textContent = "Not Available for calls";
+        } else {
+          button.style.backgroundColor = "#50C878";
+          button.style.color = "#000";
+          button.textContent = "Available for calls";
         }
+      }
 
-        updateButtonAvailability();
+      updateButtonAvailability();
 
-        setInterval(updateButtonAvailability, 15 * 60 * 1000);
+      setInterval(updateButtonAvailability, 15 * 60 * 1000);
     </script>
-
-</body>
-
+  </body>
 </html>
