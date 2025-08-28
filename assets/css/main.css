@@ -384,7 +384,7 @@ nav {
 
 /* Front */
 .flip-card-front {
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, #167eea, #764ba2);
 }
 .project-title {
   font-size: 1.2rem;
@@ -407,6 +407,14 @@ nav {
   transform: rotateY(180deg);
   font-size: 0.95rem;
   line-height: 1.5;
+}
+
+.linked-card .flip-card-front {
+  background: linear-gradient(135deg, #00365a, #5b627a); /* Muted indigo-gray tones */
+}
+
+.linked-card .flip-card-back {
+  background: linear-gradient(135deg, #3b3f58, #5b627a); /* Muted indigo-gray tones */
 }
 
 /* Responsive */
