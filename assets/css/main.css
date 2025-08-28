@@ -90,6 +90,7 @@ nav {
   left: 0;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
+
 /* Hero Section */
 .hero--container {
   display: flex;
@@ -101,7 +102,6 @@ nav {
   padding: 0 1rem;
 }
 
-/* Text Box */
 .hero--text {
   background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
@@ -127,65 +127,6 @@ nav {
 }
 
 .hero--text strong {
-  color: #667eea;
-}
-
-/* Hamburger */
-.navbar--hamburger {
-  font-size: 1.5rem;
-  cursor: pointer;
-  margin-bottom: 1rem;
-  display: inline-block;
-  color: #667eea;
-}
-
-/* Images Container */
-/* Hero Section */
-.hero--container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 2.5rem;
-  margin: 4rem 0;
-  padding: 0 1rem;
-}
-
-/* Text Box */
-.hero--text {
-  background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
-  color: #111;
-  padding: 3rem 2.5rem;
-  border-radius: 1.5rem;
-  max-width: 600px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-}
-
-.hero--text h1 {
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: #222;
-}
-
-.hero--text p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-  color: #444;
-}
-
-.hero--text strong {
-  color: #667eea;
-}
-
-/* Hamburger */
-.navbar--hamburger {
-  font-size: 1.5rem;
-  cursor: pointer;
-  margin-bottom: 1rem;
-  display: inline-block;
   color: #667eea;
 }
 
@@ -261,6 +202,190 @@ nav {
   }
 }
 
+/* Section Title */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #333;
+  text-transform: uppercase;
+  position: relative;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  margin: 10px auto 0;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 2px;
+}
+/* Why Startups Hire Me */
+.for-startups {
+  text-align: center;
+  margin: 5rem 0;
+}
+
+.startup-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+.startup-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.startup-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.startup-card h3 {
+  font-size: 1.2rem;
+  color: #667eea;
+  margin-bottom: 0.5rem;
+}
+
+/* Testimonials */
+.testimonials {
+  margin: 5rem 0;
+  text-align: center;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+.testimonial-card {
+  background: linear-gradient(135deg, #f8f9ff, #eef1fb);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  font-style: italic;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+}
+
+.testimonial-card p {
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 1rem;
+}
+
+.testimonial-card span {
+  display: block;
+  font-weight: 600;
+  color: #555;
+}
+
+
+/* Why Startups Section */
+.why-startups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 3rem auto;
+  max-width: 1100px;
+  padding: 1rem;
+}
+
+.why-startups .reason {
+  background: rgba(255,255,255,0.9);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.why-startups .reason:hover {
+  transform: translateY(-5px);
+}
+
+.why-startups .reason h3 {
+  color: #667eea;
+  margin-bottom: 0.75rem;
+}
+
+/* Testimonials */
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.testimonial-card {
+  flex: 1 1 300px;
+  background: rgba(255,255,255,0.85);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.testimonial-card strong {
+  display: block;
+  margin-top: 1rem;
+  font-style: normal;
+  color: #222;
+}
+
+/* Call To Action Banner */
+.cta-banner {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  border-radius: 1.5rem;
+  margin: 4rem auto;
+  max-width: 900px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+
+.cta-banner h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-banner p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.cta-banner a {
+  background: #fff;
+  color: #667eea;
+  padding: 0.75rem 1.5rem;
+  border-radius: 3rem;
+  font-weight: 600;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.cta-banner a:hover {
+  background: #222;
+  color: #fff;
+}
+
 /* Work History */
 .workHistory--container {
   display: flex;
@@ -314,28 +439,7 @@ nav {
   }
 }
 
-/* Section Title */
-.section-title {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 3rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #333;
-  text-transform: uppercase;
-  position: relative;
-}
-.section-title::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 3px;
-  margin: 10px auto 0;
-  background: linear-gradient(90deg, #667eea, #764ba2);
-  border-radius: 2px;
-}
-
-/* Container */
+/* Project History Cards */
 .projectHistory--container {
   display: flex;
   flex-wrap: wrap;
@@ -345,7 +449,6 @@ nav {
   margin-bottom: 5rem;
 }
 
-/* Card */
 .flip-card {
   background: transparent;
   width: 340px;
@@ -367,7 +470,6 @@ nav {
   transform: rotateY(180deg);
 }
 
-/* Faces */
 .flip-card-front,
 .flip-card-back {
   position: absolute;
@@ -382,7 +484,6 @@ nav {
   color: #fff;
 }
 
-/* Front */
 .flip-card-front {
   background: linear-gradient(135deg, #167eea, #764ba2);
 }
@@ -401,7 +502,6 @@ nav {
   opacity: 0.85;
 }
 
-/* Back */
 .flip-card-back {
   background: linear-gradient(135deg, #43cea2, #185a9d);
   transform: rotateY(180deg);
@@ -410,14 +510,13 @@ nav {
 }
 
 .linked-card .flip-card-front {
-  background: linear-gradient(135deg, #00365a, #5b627a); /* Muted indigo-gray tones */
+  background: linear-gradient(135deg, #00365a, #5b627a);
 }
 
 .linked-card .flip-card-back {
-  background: linear-gradient(135deg, #3b3f58, #5b627a); /* Muted indigo-gray tones */
+  background: linear-gradient(135deg, #3b3f58, #5b627a);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .flip-card {
     width: 95%;
@@ -427,66 +526,56 @@ nav {
     font-size: 0.9rem;
   }
 }
-
 /* Samples section */
-/* Samples Section */
 .project-samples {
-  margin-bottom: 2.5rem;
+  margin-bottom: 4rem;
   text-align: center;
 }
 
-.samples-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: #333;
+.samples-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-.samples-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 600px;
-}
-.samples-list li {
-  margin-bottom: 1rem;
-}
-
-/* CRM sample card */
 .sample-card a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: block;
   text-decoration: none;
-  color: #333;
+  color: inherit;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
-  padding: 1rem;
-  border-radius: 12px;
+  border-radius: 16px;
+  overflow: hidden;
   box-shadow: 0 6px 20px rgba(0,0,0,0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .sample-card a:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
 }
 
 .sample-card img {
   width: 100%;
-  max-width: 280px;
-  height: auto;
-  border-radius: 8px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.sample-content {
+  padding: 1rem;
+}
+
+.sample-content h3 {
+  font-size: 1.1rem;
   margin-bottom: 0.5rem;
 }
 
-.sample-card p {
-  font-weight: 500;
+.sample-content p {
   font-size: 0.95rem;
-  text-align: center;
-  margin: 0;
-  color: #667eea;
+  color: #555;
 }
+
 .workHistory--card {
   width: 280px;
   background: rgba(255,255,255,0.08);
@@ -507,7 +596,7 @@ nav {
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  color: #111; /* Make text visible */
+  color: #111;
 }
 
 .work-card-image img {
