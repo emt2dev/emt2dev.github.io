@@ -637,3 +637,77 @@ nav {
   color: #667eea;
   font-weight: 500;
 }
+
+
+.diaries {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* Diary Card */
+.diary {
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.diary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.diary-content {
+  padding: 2rem;
+}
+
+/* Headings */
+.diary h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.diary h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #374151;
+}
+
+/* Paragraphs */
+.diary p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #4b5563;
+}
+
+/* Lists */
+.diary ul {
+  margin: 0.5rem 0 1.5rem 1.25rem;
+  padding: 0;
+}
+
+.diary li {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.diary li strong {
+  color: #111827;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .diary-content {
+    padding: 1.25rem;
+  }
+
+  .diary h3 {
+    font-size: 1.3rem;
+  }
+}
