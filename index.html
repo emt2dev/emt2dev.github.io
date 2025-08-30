@@ -283,12 +283,11 @@
             with a proper identity system using Microsoft Identity, Entra ID/Active Directory, and MFA.</p>
 
           <p>At the same time, I built an automated SFTP process for HL7 file exchange with correctional pharmacies. I
-            split my days—SFTP during business hours, security refactoring at night. Not everyone was happy about that,
-            but it was the right thing to do.</p>
+            would work on the SFTP integration during my agreed business hours, and solved the authentication insecurity at night while eating buffalo hot wings.</p>
 
           <p>As deadlines approached, cost discussions surfaced. The company projected over $400K annually in Azure SQL
             Server storage. When I asked why, the answer was: “we don’t know another way.” I proposed migrating to Azure
-            MySQL, drawing on past experience. The move cut projected costs nearly in half (~$207K annually) and I got
+            MySQL, drawing on past experience. The move cut projected costs nearly in half (roughly $207K annually) and I got
             the greenlight to implement it for the EHR platform and since my purview was specific to the new EHR, all I
             had to do was wipe out debugging data (was planned to do anyways) while the IT department would write the
             migration scripts from MSSQL Server to MySQL.</p>
@@ -334,7 +333,7 @@
             quote data (including addresses) was stored in a key-value table that created massive duplication.</p>
 
           <p>For example, a large client with thousands of locations could easily generate tens of thousands of rows
-            just to represent addresses. One quote could balloon to ~5MB and slow down the entire system. My first
+            just to represent addresses. One quote could balloon to roughly 5MB and slow down the entire system. My first
             recommendation was to normalize addresses into a single row (e.g., using a structured string format), but it
             was met with resistance because “no one on the team had done that before.”</p>
 
