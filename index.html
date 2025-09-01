@@ -71,18 +71,17 @@
   <main>
     <div class="hero--container">
       <div class="hero--text">
-        <h1>I help startups launch and scale software fast</h1>
+        <h1>Turning startup ideas into real products, fast.</h1>
         <p>
-          Would you hire a former EMT that was recognized by President Obama for service, and now a startup-focused developer with
-          7+ years of experience building SaaS, telehealth, and enterprise systems that has saved companies over fifty percent of cloud storage costs, saved $500,000 in operating costs, increased sales by seventy-five percent?
-        </p>
-
-        <p>
-          I partner with founders to turn ideas into investor-ready products. My focus: <strong>fast execution,
-            scalability, and compliance</strong>.
+          I partner with founders to build SaaS, telehealth, and enterprise systems that are <strong>scalable,
+            compliant, and investor-ready</strong>.
         </p>
         <p>
-          Let’s build something that matters.
+          With 7+ years of experience, I’ve helped teams <strong>save costs, increase efficiency, and deliver
+            impact</strong>—all while moving fast.
+        </p>
+        <p>
+          Let’s build something that matters together.
         </p>
       </div>
       <div class="hero--images">
@@ -109,7 +108,7 @@
         </div>
         <div class="startup-card">
           <h3>🔒 Compliance</h3>
-          <p>HIPAA, healthcare, and financial-grade security.</p>
+          <p>PCI-DSS, HIPAA, GDPR.</p>
         </div>
         <div class="startup-card">
           <h3>🤝 Founder-Friendly</h3>
@@ -253,112 +252,39 @@
         </div>
       </div>
     </section>
+<h2 class="section-title">Project Highlights</h2>
+<section class="diaries">
+  <div class="diary">
+    <div class="diary-content">
+      <h3>⚕️ Electronic Health Record (EHR) Platform</h3>
+      <p>Served as the sole developer on a healthcare project to replace a legacy SharePoint-based EHR with a cloud-native application. Delivered the project from partial completion to production-ready deployment within seven months.</p>
 
-    <h2 class="section-title">Take a ride along with me...</h2>
-    <section class="diaries">
-      <div class="diary">
-        <div class="diary-content">
-          <h3>⚕️ Electronic Health Record</h3>
-          <p>Back in 2023, I joined a healthcare company as the sole developer on a project that had been running since
-            2021. The goal was ambitious: replace a legacy SharePoint-based EHR with a cloud-native application. Because
-            of staffing shortages, I stepped in to take the project from half-finished to production-ready.</p>
+      <p>Implemented HL7 and FHIR integrations with pharmacies, laboratories, and correctional healthcare services. Built a custom HL7 encoder/decoder to ensure high-performance data processing.</p>
 
-          <p>One of my first responsibilities was to implement HL7 and FHIR integrations with pharmacies, laboratories,
-            and the USMS service for correctional healthcare. I built a custom HL7 encoder/decoder using generics, which
-            allowed me to move quickly without sacrificing performance.</p>
+      <p>Introduced automated testing across frontend (TestCafe) and backend (XUnit) to ensure maintainability and system reliability. Designed and implemented the UI/UX using a pre-built admin dashboard framework.</p>
 
-          <p>Since I knew my contract would end once the project was complete, I also focused on leaving the system
-            maintainable. I introduced automated end-to-end testing using TestCafe (frontend) and XUnit (backend). On
-            top of that, I designed and implemented the entire UI/UX using a pre-purchased admin dashboard as a base.
-          </p>
+      <p>Optimized database performance: introduced pagination and switched to a more efficient ORM, reducing patient record retrieval times from 35 seconds to under one second.</p>
 
-          <p>After integrations and UI were working, I tackled database performance. At that point, fetching just ten
-            patient records took over 35 seconds. By introducing database-side pagination with stored procedures and
-            switching to a more efficient ORM, I reduced that to under one second.</p>
+      <p>Implemented a secure authentication system using Microsoft Identity, Entra ID/Active Directory, and MFA. Developed automated SFTP processes for HL7 file exchanges with external partners.</p>
 
-          <p>Authentication was another major challenge. The existing system simply wasn’t functional—logins failed, and
-            registrations broke. When I dug deeper, I discovered that during demos the Solution Architect would manually
-            add rows to the database on their local machine so logins “appeared” to work. That approach might have
-            looked fine in front of stakeholders, but it was completely insecure and not production-ready. I replaced it
-            with a proper identity system using Microsoft Identity, Entra ID/Active Directory, and MFA.</p>
+      <p>Proposed and executed a migration from Azure SQL Server to Azure MySQL, reducing projected annual costs by approximately 50% (~$207K). Successfully deployed the platform to Azure and handed over production-ready master accounts.</p>
+    </div>
+  </div>
 
-          <p>At the same time, I built an automated SFTP process for HL7 file exchange with correctional pharmacies. I
-            would work on the SFTP integration during my agreed business hours, and solved the authentication insecurity at night while eating buffalo hot wings.</p>
+  <div class="diary">
+    <div class="diary-content">
+      <h3>💹 Online Quoting System (Internal Tool)</h3>
+      <p>Rebuilt a legacy vendor-based quoting system to replace a $500K/year unsupported application. Delivered a centralized work area for underwriters and agents with fully functioning role-based access control (RBAC) and fine-grained permissions.</p>
 
-          <p>As deadlines approached, cost discussions surfaced. The company projected over $400K annually in Azure SQL
-            Server storage. When I asked why, the answer was: “we don’t know another way.” I proposed migrating to Azure
-            MySQL, drawing on past experience. The move cut projected costs nearly in half (roughly $207K annually) and I got
-            the greenlight to implement it for the EHR platform and since my purview was specific to the new EHR, all I
-            had to do was wipe out debugging data (was planned to do anyways) while the IT department would write the
-            migration scripts from MSSQL Server to MySQL.</p>
+      <p>Redesigned the database schema to eliminate duplication and improve performance, including normalizing address data. Introduced a component library to modernize the frontend and streamline development.</p>
 
-          <p>Not every moment was smooth. For example, I’d see pull requests approved, only for code to be silently
-            rewritten later (one example was taking a generics repository (one single file that could be used with many
-            files) and having it rewritten for every single entity (one file became 35 with no specific changes)).
-            In one demo, I realized the company planned on deploying the application Azure placeholder URL instead of
-            buying an actual domain. Finally, I noticed that the closer I got to the completion date, some of my tests were removed.
-            Still, I kept focused on delivery.</p>
+      <p>Managed end-to-end feature development, including backend APIs, frontend components, and deployment pipelines. Delivered all milestones ahead of schedule while ensuring system scalability and maintainability.</p>
 
-          <p>Along the lines of the application's performance, it was discovered the SA had placed everything on
-            different Azure servers: the database was in one region, the API in a different region (on Azure) separate
-            from the client (the UI), was deploying the API in a development state instead of building for production.
-            By speaking with the company's Director of IT, I was successful in solving the potential issue of not having
-            a working application in the event one Azure region is unavaialble. After fixing these small changes, I was
-            happy with the the application.</p>
+      <p>Successfully implemented security, access controls, and data workflows. Project completion enabled the company to retire the legacy system and improve operational efficiency.</p>
+    </div>
+  </div>
+</section>
 
-          <p>After seven months, the platform was finally complete. I deployed it to Azure, handed over master user
-            accounts, and closed out my contract. A week later, one of the pharmacies using my HL7 integration reached
-            out and invited me to help build their startup.</p>
-        </div>
-      </div>
-      <div class="diary">
-        <div class="diary-content">
-          <h3>💹 Online Quote Diary (Internal Tool)</h3>
-
-          <p>In early 2025, I was recruited and relocated to Lakeland, FL to take on a project the company had been
-            struggling with for nearly a decade. The goal was to replace a vendor-built quoting application that cost
-            over $500,000 annually and was no longer supported. With a major deadline looming for User Acceptance
-            Testing (August 2025), I was brought in to help turn things around.</p>
-
-          <p>The company operated more like a traditional corporation than a startup. Simple questions required
-            meetings, conference rooms, and multiple stakeholders which was not exactly ideal for a project already
-            years behind. I leaned on my experience as an EMT to cut through the chaos, and get the critical information
-            directly from the people who had it without them realizing.</p>
-
-          <p>What I found was concerning. The web team hadn’t pushed anything new to production in ten whole years. The
-            lead frontend developer was building a dynamic form builder (instead of the seven distinct pages the
-            business requested) and there was a decision made for “job security,” not efficiency. The backend lead, with
-            24 years at the company, was copy-pasting code from the vendor’s old system into the new API. Worse, the
-            database schema was poorly designed: every field was a <code>varchar(255)</code> or <code>text</code>, and
-            quote data (including addresses) was stored in a key-value table that created massive duplication.</p>
-
-          <p>For example, a large client with thousands of locations could easily generate tens of thousands of rows
-            just to represent addresses. One quote could balloon to roughly 5MB and slow down the entire system. My first
-            recommendation was to normalize addresses into a single row (e.g., using a structured string format), but it
-            was met with resistance because “no one on the team had done that before.”</p>
-
-          <p>Despite the technical hurdles, I was assigned the most critical feature: a centralized work area where
-            underwriters and agents could view and manage all quotes. This required implementing role-based access
-            control (RBAC) with fine-grained permissions. Along the way, I gained deep experience with aspect-oriented
-            programming and delivered every milestone on schedule.</p>
-
-          <p>But by May, progress had stalled: especially on the frontend. After building strong relationships, I had a
-            candid conversation with the lead frontend dev. He admitted he was overwhelmed and secure in his position,
-            so deadlines weren’t a priority. Instead of letting that derail the project, I persuaded him to let me take
-            over the client implementation for my features. I introduced a component library to replace Shoelace and
-            finished the frontend in parallel with my backend work.</p>
-
-          <p>By July, I had completed everything I was brought in to do. The centralized work area was live, access
-            control was functioning, and all deliverables were met ahead of schedule. Another happy client and another
-            reminder that even the most entrenched projects can be turned around with the right focus and persistence.
-          </p>
-
-          <p>After wrapping this up, I decided to launch my own SaaS: <strong>Pelican Journal</strong> and self-host it.
-            Unlike the organizations I’ve helped, I’m proving there’s no reason to spend years building an MVP. It's
-            going live on <em>September 15, 2025</em>.</p>
-        </div>
-      </div>
-    </section>
 
     <!-- Call To Action -->
     <section class="cta-banner">
