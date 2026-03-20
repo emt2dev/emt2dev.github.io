@@ -11,6 +11,29 @@ a {
   text-decoration: none;
 }
 
+.btn-modern {
+  display: inline-block;
+  padding: 0.9rem 2.2rem;
+  background: #00365a;
+  color: #eee;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.btn-modern:hover {
+  background: #fff;
+  color: #111;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  transform: translateY(-2px);
+}
+
+
 a:visited, a:hover, a:focus {
   text-decoration: none;
   color: #000;
