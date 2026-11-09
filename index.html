@@ -1,425 +1,622 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>David Duron</title>
-  <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>David Duron — Senior Software Engineer</title>
+  <meta name="description"
+    content="David Duron is a senior software engineer with 8+ years building compliant, scalable systems across fintech, government, and healthcare." />
+  <meta name="author" content="David Duron" />
+  <meta name="theme-color" content="#f7f8fb" id="themeColor" />
+  <link rel="canonical" href="https://emt2dev.github.io/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="David Duron — Senior Software Engineer" />
+  <meta property="og:description"
+    content="Senior software engineer with 8+ years building compliant, scalable systems across fintech, government, and healthcare." />
+  <meta property="og:url" content="https://emt2dev.github.io/" />
+  <meta property="og:image" content="./assets/media/images/david/suit.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
     rel="stylesheet" />
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var theme = "light";
+      try {
+        if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          theme = "dark";
+        }
+      } catch (error) { }
+      try {
+        var saved = localStorage.getItem("theme");
+        if (saved === "light" || saved === "aero" || saved === "dark") {
+          theme = saved;
+        }
+      } catch (error) { }
+      root.setAttribute("data-theme", theme);
+    })();
+  </script>
+
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="shortcut icon" href="./assets/media/favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
-  <header>
-    <nav id="mobileMenu" class="hidden">
-      <div class="navbar--hamburger" onclick="toggleMenu()">X</div>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-      <a href="mailto:emt2dev@gmail.com?subject=Interview&body=Hello, I'd like to schedule an interview"
-        class="nav-link" role="link">
-        Email
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="David Duron, back to top">
+        <span class="brand-mark" aria-hidden="true">DD</span>
+        <span class="brand-text">
+          <span class="brand-name">David Duron</span>
+          <span class="brand-role">Senior Software Engineer</span>
+        </span>
       </a>
 
-      <address class="contact-info" aria-label="Contact information">
-        <strong>David Duron</strong><br />
-        <a href="tel:+18633151851">(863) 315-1851</a>
-      </address>
-    </nav>
-    <nav aria-label="Primary navigation">
-      <div class="navbar--btnGroup">
-        <button id="availabilityButton" role="status" aria-pressed="true" aria-live="polite">
-          Available
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="#why">Why me</a>
+        <a href="#approach">Approach</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="availability" id="availability" role="status" aria-live="polite" title="Available 8am–6pm ET">
+          <span class="availability-dot" aria-hidden="true"></span>
+          <span id="availabilityText">Available for calls</span>
+        </div>
+
+        <div class="theme-switcher" role="group" aria-label="Color theme">
+          <button type="button" class="theme-btn" data-theme-value="light" aria-pressed="true" aria-label="Light theme"
+            title="Light theme">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+            </svg>
+            <span class="theme-btn-label">Light</span>
+          </button>
+          <button type="button" class="theme-btn" data-theme-value="aero" aria-pressed="false" aria-label="Aero theme"
+            title="Aero theme">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2.7s6 6.3 6 10.3a6 6 0 0 1-12 0c0-4 6-10.3 6-10.3Z" />
+            </svg>
+            <span class="theme-btn-label">Aero</span>
+          </button>
+          <button type="button" class="theme-btn" data-theme-value="dark" aria-pressed="false" aria-label="Night theme"
+            title="Night theme">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" />
+            </svg>
+            <span class="theme-btn-label">Night</span>
+          </button>
+        </div>
+
+        <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileDrawer"
+          aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
         </button>
-
-        <a href="mailto:emt2dev@gmail.com?subject=Interview&body=Hello, I'd like to schedule an interview"
-          class="nav-link" role="link">
-          Email
-        </a>
-
-        <address class="contact-info" aria-label="Contact information">
-          <strong>David Duron</strong><br />
-          <a href="tel:+18633151851">(863) 315-1851</a>
-        </address>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <div class="hero--container">
-      <div class="hero--text">
-        <h1>Senior Software Engineer</h1>
-        <p>
-          From saving lives as a Firefighter and EMT to building compliant high quality systems to scale
-          <br />
-        <p>
-          Let’s build something that matters together.
-        </p>
-
-      </div>
-      <div class="hero--images">
-        <img src="./assets/media/images/david/suit.png" alt="David in suit" class="hero-portrait" />
       </div>
     </div>
+  </header>
 
-    <!-- Why Startups Hire Me -->
-    <section class="for-startups">
-      <h2 class="section-title">Why Companies Hire Me</h2>
-      <div class="startup-grid">
-        <div class="startup-card">
+  <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+  <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true" aria-label="Mobile navigation">
+    <div class="drawer-top">
+      <span class="brand-mark" aria-hidden="true">DD</span>
+      <button type="button" class="icon-btn" id="drawerClose" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+          stroke-linejoin="round" aria-hidden="true">
+          <path d="m6 6 12 12M18 6 6 18" />
+        </svg>
+      </button>
+    </div>
+
+    <nav class="drawer-nav" aria-label="Mobile primary">
+      <a href="#why"><span>01</span>Why me</a>
+      <a href="#approach"><span>02</span>Approach</a>
+      <a href="#experience"><span>03</span>Experience</a>
+      <a href="#projects"><span>04</span>Projects</a>
+      <a href="#contact"><span>05</span>Contact</a>
+    </nav>
+
+    <div class="drawer-contact">
+      <p class="drawer-label">Contact</p>
+      <a href="mailto:emt2dev@gmail.com?subject=Interview&body=Hello, I'd like to schedule an interview">emt2dev@gmail.com</a>
+      <a href="tel:+18633151851">(863) 315-1851</a>
+      <p class="drawer-note">Available for calls 8am–6pm ET</p>
+    </div>
+  </aside>
+
+  <main id="main">
+    <section class="hero container" id="top">
+      <div class="hero-copy" data-reveal>
+        <p class="eyebrow">8+ years · Fintech · Government · Healthcare</p>
+        <h1>
+          Senior Software Engineer
+          <span class="grad">building systems that matter.</span>
+        </h1>
+        <p class="hero-lede">
+          From saving lives as a firefighter and EMT to building compliant, high-quality systems at scale. I bring
+          calm under pressure, clear communication, and end-to-end ownership to every team I join.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary"
+            href="mailto:emt2dev@gmail.com?subject=Interview&body=Hello, I'd like to schedule an interview">
+            Start a conversation
+          </a>
+          <a class="btn btn-ghost" href="#projects">See selected work</a>
+        </div>
+        <dl class="hero-stats">
+          <div>
+            <dt>8+</dt>
+            <dd>Years building software</dd>
+          </div>
+          <div>
+            <dt>6+</dt>
+            <dd>Industries served</dd>
+          </div>
+          <div>
+            <dt>End-to-end</dt>
+            <dd>Architecture to production</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="hero-visual" data-reveal>
+        <div class="portrait-frame">
+          <img src="./assets/media/images/david/suit.png" alt="David Duron in a suit" width="320" height="400"
+            loading="eager" fetchpriority="high" />
+        </div>
+        <p class="hero-badge"><span>Firefighter</span><span>EMT</span><span>Engineer</span></p>
+      </div>
+    </section>
+
+    <section class="section container" id="why">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">What I bring</p>
+        <h2>Why companies hire me</h2>
+        <p class="section-lede">
+          Senior-level ownership, fast ramp-up, and the calm of someone who has worked in high-stakes environments.
+        </p>
+      </div>
+
+      <div class="feature-grid" data-reveal>
+        <article class="card feature">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M12 7v5l3 2" />
+            </svg>
+          </span>
           <h3>8+ Years</h3>
           <p>
             Building greenfield applications, delivering application modernizations, building authentication and
-            authorization
+            authorization.
           </p>
-        </div>
+        </article>
 
-        <div class="startup-card">
+        <article class="card feature">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z" />
+            </svg>
+          </span>
           <h3>Fast Ramp-Up</h3>
           <p>
-            I dive into complex environments, quickly learn the codebase
-            and business domain, and start making meaningful contributions
-            early in the project.
+            I dive into complex environments, quickly learn the codebase and business domain, and start making
+            meaningful contributions early in the project.
           </p>
-        </div>
+        </article>
 
-        <div class="startup-card">
+        <article class="card feature">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+          </span>
           <h3>Team Multiplier</h3>
           <p>
-            I enjoy helping other engineers grow through mentoring,
-            collaboration, and peer programming. I'm also writing a book
-            to help professionals make successful transitions into
-            second careers in technology.
+            I enjoy helping other engineers grow through mentoring, collaboration, and peer programming. I'm also
+            writing a book to help professionals make successful transitions into second careers in technology.
           </p>
-        </div>
+        </article>
 
-        <div class="startup-card">
+        <article class="card feature">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18Z" />
+            </svg>
+          </span>
           <h3>Global Collaboration</h3>
           <p>
-            I work directly with stakeholders and distributed teams to
-            translate business and compliance requirements into clear
-            technical solutions while keeping everyone aligned through
-            delivery.
+            I work directly with stakeholders and distributed teams to translate business and compliance requirements
+            into clear technical solutions while keeping everyone aligned through delivery.
           </p>
-        </div>
+        </article>
 
-        <div class="startup-card">
+        <article class="card feature">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z" />
+              <path d="m9 12 2 2 4-4" />
+            </svg>
+          </span>
           <h3>Engineering Quality</h3>
           <p>
-            Good engineering isn't just about the code I write. I want
-            the team to have better documentation, better practices,
-            shared knowledge, and fewer dependencies on any single
-            person.
+            Good engineering isn't just about the code I write. I want the team to have better documentation, better
+            practices, shared knowledge, and fewer dependencies on any single person.
           </p>
-        </div>
+        </article>
 
-        <div class="startup-card">
+        <article class="card feature">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9" />
+              <path d="m8.5 12 2.5 2.5 4.5-5" />
+            </svg>
+          </span>
           <h3>Accountability</h3>
           <p>
-            I take ownership from requirements through production. That
-            means understanding the problem, defining the solution,
-            coordinating implementation, validating the result, and
-            making sure the feature works when it reaches production.
+            I take ownership from requirements through production. That means understanding the problem, defining the
+            solution, coordinating implementation, validating the result, and making sure the feature works when it
+            reaches production.
           </p>
-        </div>
-
-
+        </article>
       </div>
     </section>
 
-    <!-- Engineering Philosophy -->
-    <section class="engineering-philosophy">
-      <h2 class="section-title">How I Approach Engineering</h2>
+    <section class="section container" id="approach">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Working principles</p>
+        <h2>How I approach engineering</h2>
+        <p class="section-lede">The habits and standards I bring to every team and codebase.</p>
+      </div>
 
-      <div class="testimonial-grid">
-
-        <div class="testimonial-card">
+      <div class="approach-grid" data-reveal>
+        <article class="card approach">
+          <span class="approach-number">01</span>
           <h3>Understand Before I Build</h3>
           <p>
-            I start by understanding the business requirement, the
-            underlying problem, and the desired outcome. Aligning all
-            three helps ensure we're solving the right problem and
-            spending the company's time and resources wisely.
+            I start by understanding the business requirement, the underlying problem, and the desired outcome.
+            Aligning all three helps ensure we're solving the right problem and spending the company's time and
+            resources wisely.
           </p>
-        </div>
+        </article>
 
-        <div class="testimonial-card">
+        <article class="card approach">
+          <span class="approach-number">02</span>
           <h3>Build a Healthy Culture</h3>
           <p>
-            Complexity shouldn't exist simply because it's fashionable.
-            I believe in clear documentation, practical development
-            standards, and creating an environment where engineers can
-            question unnecessary complexity and improve how we work.
+            Complexity shouldn't exist simply because it's fashionable. I believe in clear documentation, practical
+            development standards, and creating an environment where engineers can question unnecessary complexity and
+            improve how we work.
           </p>
-        </div>
+        </article>
 
-        <div class="testimonial-card">
+        <article class="card approach">
+          <span class="approach-number">03</span>
           <h3>Build for the Company</h3>
           <p>
-            I take pride in my work, but I never forget that the code
-            belongs to the company. I build systems that are
-            straightforward, maintainable, scalable, and easy for the
-            next engineer to understand and extend.
+            I take pride in my work, but I never forget that the code belongs to the company. I build systems that are
+            straightforward, maintainable, scalable, and easy for the next engineer to understand and extend.
           </p>
-        </div>
+        </article>
       </div>
     </section>
 
-    <section class="project-history">
-      <h2 class="section-title">Work History</h2>
-      <div class="workHistory--container">
-        <div class="workHistory--images--container">
+    <section class="section container" id="experience">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">The path here</p>
+        <h2>Work history</h2>
+        <p class="section-lede">
+          Two careers, one throughline: staying calm, making decisions, and owning the outcome.
+        </p>
+      </div>
 
-          <!-- Firefighter -->
-          <div class="workHistory--card">
-            <a href="#" class="work-card-link">
-              <div class="work-card-image">
-                <img src="./assets/media/images/david/fd1.JPG" alt="Firefighter 2009-2012" />
-              </div>
-              <div class="work-card-info">
-                <h3 class="work-card-title">Firefighter</h3>
-                <p class="work-card-dates">2009 - 2012</p>
-                <p>
-                  Built the discipline, teamwork, and urgency that set me apart.
-                </p>
-              </div>
-            </a>
-          </div>
+      <ol class="timeline" data-reveal>
+        <li class="timeline-item">
+          <span class="timeline-marker" aria-hidden="true">01</span>
+          <article class="card timeline-card">
+            <div class="timeline-media">
+              <img src="./assets/media/images/david/fd1.JPG" alt="David as a firefighter, 2009 to 2012"
+                loading="lazy" />
+            </div>
+            <div class="timeline-body">
+              <p class="timeline-years">2009 – 2012</p>
+              <h3>Firefighter</h3>
+              <p>Built the discipline, teamwork, and urgency that set me apart.</p>
+            </div>
+          </article>
+        </li>
 
-          <!-- EMT -->
-          <div class="workHistory--card">
-            <a href="#" class="work-card-link">
-              <div class="work-card-image">
-                <img src="./assets/media/images/david/ems.png" alt="EMT 2012-2018" />
-              </div>
-              <div class="work-card-info">
-                <h3 class="work-card-title">Emergency Medical Technician</h3>
-                <p class="work-card-dates">2012 - 2018</p>
-                <p>
-                  Learned how to make the right decisions with little to no room for error in high-stakes situations
-                </p>
-              </div>
-            </a>
-          </div>
+        <li class="timeline-item">
+          <span class="timeline-marker" aria-hidden="true">02</span>
+          <article class="card timeline-card">
+            <div class="timeline-media">
+              <img src="./assets/media/images/david/ems.png" alt="David as an emergency medical technician, 2012 to 2018"
+                loading="lazy" />
+            </div>
+            <div class="timeline-body">
+              <p class="timeline-years">2012 – 2018</p>
+              <h3>Emergency Medical Technician</h3>
+              <p>
+                Learned how to make the right decisions with little to no room for error in high-stakes situations.
+              </p>
+            </div>
+          </article>
+        </li>
 
-          <!-- Software Engineer -->
-          <div class="workHistory--card">
-            <a href="#" class="work-card-link">
-              <div class="work-card-image">
-                <img src="./assets/media/images/david/davidBlack.png" alt="Software Engineer 2018-Present" />
-              </div>
-              <div class="work-card-info">
-                <h3 class="work-card-title">Software Engineer</h3>
-                <p class="work-card-dates">2018 – Present</p>
-                <p>
-                  Using the skills I learned as a Firefighter and EMT (plus a little creativity) allow me to deliver
-                  results... not excuses.
-                </p>
-              </div>
-            </a>
+        <li class="timeline-item">
+          <span class="timeline-marker" aria-hidden="true">03</span>
+          <article class="card timeline-card">
+            <div class="timeline-media">
+              <img src="./assets/media/images/david/davidBlack.png" alt="David as a software engineer, 2018 to present"
+                loading="lazy" />
+            </div>
+            <div class="timeline-body">
+              <p class="timeline-years">2018 – Present</p>
+              <h3>Software Engineer</h3>
+              <p>
+                Using the skills I learned as a firefighter and EMT (plus a little creativity) allows me to deliver
+                results — not excuses.
+              </p>
+            </div>
+          </article>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section container" id="projects">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Recent work</p>
+        <h2>Selected projects</h2>
+        <p class="section-lede">Systems delivered across fintech, government, healthcare, and insurance.</p>
+      </div>
+
+      <div class="project-grid" data-reveal>
+        <a class="card project-card" href="https://themsl.com/" target="_blank" rel="noopener noreferrer"
+          aria-label="The Money Service Lab — opens in a new tab">
+          <div class="project-top">
+            <p class="project-company">Fintech · Payments</p>
+            <span class="project-arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M7 17 17 7M8 7h9v9" />
+              </svg>
+            </span>
           </div>
-        </div>
+          <h3>The Money Service Lab</h3>
+          <ul>
+            <li>Design and develop microservices and REST APIs supporting payment processing and SaaS products across
+              fintech and government technology domains.</li>
+            <li>Design and implement event-driven services and integrations for distributed applications, focusing on
+              scalability, reliability, and maintainability.</li>
+            <li>Own end-to-end technical delivery across frontend architecture, backend services, UI/UX, cloud
+              infrastructure, and application architecture.</li>
+            <li>Implemented GDPR, PCI-DSS, SEPA, EU, and vendor compliance for Mastercard Digital Enablement Service
+              (MDES), Google Pay, and Apple Pay.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Microservices</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">Payments</span>
+            <span class="tag">Compliance</span>
+          </div>
+        </a>
+
+        <a class="card project-card" href="https://m2-corp.com/" target="_blank" rel="noopener noreferrer"
+          aria-label="M2 Systems Corporation — opens in a new tab">
+          <div class="project-top">
+            <p class="project-company">Government · Modernization</p>
+            <span class="project-arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M7 17 17 7M8 7h9v9" />
+              </svg>
+            </span>
+          </div>
+          <h3>M2 Systems Corporation</h3>
+          <ul>
+            <li>Led modernization of a legacy Java Spring/JSP application into a Go API and Angular platform,
+              architecting permission-based authorization and a hybrid JWT/session authentication architecture.</li>
+            <li>Delivered within a six-month deadline as part of a four-person team, owning critical application
+              architecture and security functionality through production.</li>
+            <li>Mentored others and drove positive cultural changes that resulted in 20% less ticket time.</li>
+            <li>Became subject-matter expert and technical owner of a business-critical application.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Go</span>
+            <span class="tag">Angular</span>
+            <span class="tag">Auth</span>
+            <span class="tag">Modernization</span>
+          </div>
+        </a>
+
+        <a class="card project-card" href="https://www.summitholdings.com/site/" target="_blank"
+          rel="noopener noreferrer" aria-label="Summit Workers Comp Payment — opens in a new tab">
+          <div class="project-top">
+            <p class="project-company">Insurance · Security</p>
+            <span class="project-arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M7 17 17 7M8 7h9v9" />
+              </svg>
+            </span>
+          </div>
+          <h3>Summit Workers Comp Payment</h3>
+          <ul>
+            <li>Brought on to support a time-sensitive full-stack project, owning design and implementation of
+              authentication and authorization.</li>
+            <li>Developed security components across an Angular 19 frontend and Java 17 backend, integrating access
+              control with existing services.</li>
+            <li>Implemented authorization logic and user-access controls backed by DB2 and integrated with the
+              company's midrange environment.</li>
+            <li>Ensured seamless integration with the event-driven architecture and microservices (payment, insurance
+              quoting, sales, and more).</li>
+            <li>Collaborated with the team to integrate security into the broader application while meeting a strict
+              delivery deadline.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Angular 19</span>
+            <span class="tag">Java 17</span>
+            <span class="tag">DB2</span>
+            <span class="tag">Security</span>
+          </div>
+        </a>
+
+        <a class="card project-card" href="https://vvf.innovascript.com/" target="_blank" rel="noopener noreferrer"
+          aria-label="Victoria's Voice Foundation VVF (Sapphire Health) — opens in a new tab">
+          <div class="project-top">
+            <p class="project-company">Healthcare · Telehealth</p>
+            <span class="project-arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M7 17 17 7M8 7h9v9" />
+              </svg>
+            </span>
+          </div>
+          <h3>Victoria's Voice Foundation VVF (Sapphire Health)</h3>
+          <ul>
+            <li>Collaborated with stakeholders to implement features and bug fixes for a multi-tenant e-commerce
+              telehealth web application.</li>
+            <li>Implemented features end-to-end across frontend, APIs, and database, working closely with senior
+              engineering and UI/UX.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Telehealth</span>
+            <span class="tag">Multi-tenant</span>
+            <span class="tag">Full-stack</span>
+          </div>
+        </a>
+
+        <a class="card project-card" href="https://kiaora.com/" target="_blank" rel="noopener noreferrer"
+          aria-label="Kiaora (Sapphire Health) — opens in a new tab">
+          <div class="project-top">
+            <p class="project-company">Healthcare · Serverless</p>
+            <span class="project-arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M7 17 17 7M8 7h9v9" />
+              </svg>
+            </span>
+          </div>
+          <h3>Kiaora (Sapphire Health)</h3>
+          <p class="project-note">Shares the same codebase as VVF.</p>
+          <ul>
+            <li>Built and maintained Azure Functions and implemented quick-link authentication and support-user
+              workflows.</li>
+            <li>Created support-user workflows that reduced lost sales by 15% and increased recurring prescription
+              sales by 35%.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Azure Functions</span>
+            <span class="tag">Auth</span>
+            <span class="tag">Workflows</span>
+          </div>
+        </a>
+
+        <a class="card project-card" href="https://www.advancedch.com/" target="_blank" rel="noopener noreferrer"
+          aria-label="Advanced Correctional Healthcare — opens in a new tab">
+          <div class="project-top">
+            <p class="project-company">Healthcare · EHR</p>
+            <span class="project-arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M7 17 17 7M8 7h9v9" />
+              </svg>
+            </span>
+          </div>
+          <h3>Advanced Correctional Healthcare</h3>
+          <ul>
+            <li>Lead developer for modernization of an eMAR system to Azure cloud-native EHR; modernized a legacy
+              SharePoint application to .NET 6 Web API and Vue 2.</li>
+            <li>Built HL7 integration for vendors including radiology and pharmacy.</li>
+            <li>Implemented database design to ensure multi-tenancy.</li>
+            <li>Designed authorization and authentication using MS Identity and Entra ID.</li>
+            <li>Present and collaborate directly with stakeholders to ensure delivery of the MVP EHR.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">.NET 6</span>
+            <span class="tag">Vue 2</span>
+            <span class="tag">Azure</span>
+            <span class="tag">HL7</span>
+          </div>
+        </a>
       </div>
     </section>
 
-    <!-- Project Samples -->
-    <section class="project-samples">
-      <h2 class="section-title">Projects</h2>
-      <div class="samples-grid">
-        <div class="sample-card">
-          <a href="https://themsl.com/" target="_blank">
-            <div class="sample-content">
-              <h3>The Money Service Lab</h3>
-              <p>
-                Design and develop microservices and REST APIs supporting payment processing and SaaS products across
-                fintech and government technology domains.
-                <br />
-                <br />
-                Design and implement event-driven services and integrations for distributed applications, focusing on
-                scalability, reliability, and maintainability
-                <br />
-                <br />
-                Own end-to-end technical delivery across frontend architecture, backend services, UI/UX, cloud
-                infrastructure, and application architecture, translating business requirements into scalable production
-                solutions
-                <br />
-                <br />
-                Implemented GDPR, PCI-DSS, SEPA, EU, and vendor compliance for Mastercard Digital Enablement Service
-                (MDES), Google Pay, and Apple Pay
-              </p>
-            </div>
-          </a>
-        </div>
-        <div class="sample-card">
-          <a href="https://m2-corp.com/" target="_blank">
-            <div class="sample-content">
-              <h3>M2 Systems Corporation</h3>
-              <p>Led the modernization of a legacy Java Spring/JSP application into a Go API and Angular platform,
-                architecting and implementing permission-based authorization and a hybrid JWT/session authentication
-                architecture
-                <br />
-                <br />
-                Delivered the modernization project within a six-month deadline as part of a four-person engineering
-                team, owning critical application architecture and security functionality through production delivery
-                ensuring my place in other projects within the company
-                <br />
-                <br />
-                Mentored others and drove positive cultural changes that resulted in 20% less ticket time
-                Became the subject-matter expert and technical owner of a business-critical application, assuming
-                primary responsibility for its continued development, architecture, production support, and technical
-                direction.
-              </p>
-            </div>
-          </a>
-        </div>
-        <div class="sample-card">
-          <a href="https://www.summitholdings.com/site/" target="_blank">
-            <div class="sample-content">
-              <h3>Summit Workers Comp Payment</h3>
-              <p>
-                Brought on to support delivery of a time-sensitive full-stack project, owning the design and
-                implementation of authentication and authorization functionality with relocation sponsored by the
-                company
-                <br />
-                <br />
-                Developed security components across an Angular 19 frontend and Java 17 backend, integrating access
-                control with existing application services
-                <br />
-                <br />
-                Implemented authorization logic and user-access controls backed by DB2 and integrated with the company’s
-                midrange environment
-                <br />
-                <br />
-                Ensured seamless integration with company’s event-driven architecture and microservices (payment,
-                insurance quoting, sales, etc)
-                <br />
-                <br />
-                Collaborated with the development team to integrate security functionality into the broader application
-                while meeting a strict project delivery deadline
-              </p>
-            </div>
-          </a>
-        </div>
-        <!-- <div class="sample-card">
-          <a href="https://pelican-studios.com" target="_blank">
-            <div class="sample-content">
-              <h3>Pelican Studios</h3>
-              <p>Founded and developed Pelican Studios, built the platform end-to-end across the frontend, backend,
-                database, and deployment infrastructure.
-                <br />
-                <br />
-                Responsible for the full development lifecycle, from
-                architecture and implementation to hosting, maintenance, and ongoing improvements.
-              </p>
-            </div>
-          </a>
-        </div> -->
-        <div class="sample-card">
-          <a href="https://vvf.innovascript.com/" target="_blank">
-            <div class="sample-content">
-              <h3>Victoria's Voice Foundation VVF (Sapphire Health)</h3>
-              <p>
-                Collaborated with stakeholders to implement features and bug fixes for a multi-tenant e-commerce
-                telehealth web application
-                <br />
-                <br />
-                Implemented features end-to-end across frontend, APIs, and database, working closely with senior
-                engineering and UI/UX
-              </p>
-            </div>
-          </a>
-        </div>
-        <div class="sample-card">
-          <a href="https://kiaora.com/" target="_blank">
-            <div class="sample-content">
-              <h3>Kiaora (Sapphire Health)</h3>
-              <p>
-                Note* Kiaora and VVF share the same codebase
-                Built and maintained Azure Functions and implemented quick-link authentication and support-user
-                workflows
-                <br />
-                <br />
-                Created and implemented support user workflows that reduced lost sales by 15% and increased recurring
-                prescription sales by 35%
-              </p>
-            </div>
-          </a>
-        </div>
-        <div class="sample-card">
-          <a href="https://www.advancedch.com/" target="_blank">
-            <div class="sample-content">
-              <h3>Advanced Correctional Healthcare</h3>
-              <p>
-                Lead developer for modernization of an eMAR system to Azure cloud-native EHRModernized legacy sharepoint
-                application to .NET 6 Web API and Vue 2
-                <br />
-                <br />
-                Built HL7 integration for vendors including radiology and pharmacy
-                <br />
-                <br />
-                Implemented database design to ensure multi-tenancy
-                <br />
-                <br />
-                Designed authorization and authentication using MS Identity and Entra ID
-                <br />
-                <br />
-                Present and collaborate directly with stakeholders to ensure delivery of MVP EHR
-              </p>
-            </div>
-          </a>
+    <section class="section container" id="contact">
+      <div class="cta card" data-reveal>
+        <p class="eyebrow">Open to meaningful conversations</p>
+        <h2>Let's talk about what you're building.</h2>
+        <p>I'm not actively looking, but I'm always open to conversations about impactful work.</p>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="mailto:emt2dev@gmail.com?subject=Let's Connect">Get in touch</a>
+          <a class="btn btn-ghost" href="tel:+18633151851">(863) 315-1851</a>
         </div>
       </div>
     </section>
+  </main>
 
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">DD</span>
+        <div>
+          <p class="footer-name">David Duron</p>
+          <p class="footer-role">Senior Software Engineer</p>
+        </div>
+      </div>
 
-    <!-- Call To Action -->
-    <section class="cta-banner">
-      <h2>🚀 Let’s Talk About What You’re Building</h2>
-      <p>I’m not actively looking, but I’m always open to meaningful conversations about impactful work.</p>
-      <a href="mailto:emt2dev@gmail.com?subject=Let's Connect" class="btn">Get in Touch</a>
-    </section>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#why">Why me</a>
+        <a href="#approach">Approach</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-    <script>
-      function toggleMenu() {
-        const menu = document.getElementById("mobileMenu");
-        menu.classList.toggle("hidden");
-      }
-    </script>
+      <div class="footer-contact">
+        <a href="mailto:emt2dev@gmail.com">emt2dev@gmail.com</a>
+        <a href="tel:+18633151851">(863) 315-1851</a>
+        <p class="footer-note">Available for calls 8am–6pm ET</p>
+      </div>
+    </div>
 
-    <script>
-      function updateButtonAvailability() {
-        const now = new Date();
+    <div class="container footer-bottom">
+      <p>© <span id="year">2026</span> David Duron. All rights reserved.</p>
+      <p>Built with care. <a href="#top">Back to top ↑</a></p>
+    </div>
+  </footer>
 
-        const options = {
-          timeZone: "America/New_York",
-          hour: "numeric",
-          hour12: false,
-        };
-        const estHour = parseInt(
-          new Intl.DateTimeFormat("en-US", options).format(now)
-        );
-
-        const button = document.getElementById("availabilityButton");
-
-        if (estHour < 8 || estHour >= 18) {
-          button.style.backgroundColor = "#9b111e";
-          button.style.color = "aliceblue";
-          button.textContent = "Not Available for calls";
-        } else {
-          button.style.backgroundColor = "#50C878";
-          button.style.color = "#000";
-          button.textContent = "Available for calls";
-        }
-      }
-
-      updateButtonAvailability();
-
-      setInterval(updateButtonAvailability, 15 * 60 * 1000);
-    </script>
+  <script src="assets/scripts/app.js" defer></script>
 </body>
 
 </html>
