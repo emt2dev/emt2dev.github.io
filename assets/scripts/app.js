@@ -1,57 +1,7 @@
-(function () {
+﻿(function () {
   "use strict";
 
   var root = document.documentElement;
-  var THEMES = ["light", "aero", "dark"];
-  var THEME_COLORS = {
-    light: "#f7f8fb",
-    aero: "#6ed5f4",
-    dark: "#0b0f14"
-  };
-
-  var themeButtons = Array.prototype.slice.call(
-    document.querySelectorAll("[data-theme-value]")
-  );
-  var themeColorMeta = document.getElementById("themeColor");
-
-  function applyTheme(theme) {
-    if (THEMES.indexOf(theme) === -1) {
-      theme = "light";
-    }
-
-    root.setAttribute("data-theme", theme);
-
-    themeButtons.forEach(function (button) {
-      button.setAttribute(
-        "aria-pressed",
-        String(button.getAttribute("data-theme-value") === theme)
-      );
-    });
-
-    if (themeColorMeta) {
-      themeColorMeta.setAttribute("content", THEME_COLORS[theme]);
-    }
-
-    try {
-      localStorage.setItem("theme", theme);
-    } catch (error) { }
-  }
-
-  var initialTheme = root.getAttribute("data-theme") || "light";
-  try {
-    var savedTheme = localStorage.getItem("theme");
-    if (THEMES.indexOf(savedTheme) !== -1) {
-      initialTheme = savedTheme;
-    }
-  } catch (error) { }
-  applyTheme(initialTheme);
-
-  themeButtons.forEach(function (button) {
-    button.addEventListener("click", function () {
-      applyTheme(button.getAttribute("data-theme-value"));
-    });
-  });
-
   var menuToggle = document.getElementById("menuToggle");
   var drawer = document.getElementById("mobileDrawer");
   var backdrop = document.getElementById("drawerBackdrop");
@@ -134,7 +84,7 @@
   });
 
   window.addEventListener("resize", function () {
-    if (window.innerWidth > 1024) {
+    if (window.innerWidth > 940) {
       setDrawer(false);
     }
   });
@@ -156,30 +106,62 @@
     );
 
     var isAvailable = hour >= 8 && hour < 18;
-
     availability.classList.toggle("is-off", !isAvailable);
-    availabilityText.textContent = isAvailable
-      ? "Available for calls"
-      : "Not available for calls";
+    availabilityText.textContent = isAvailable ? "Available for calls" : "Not available for calls";
   }
 
   updateAvailability();
   setInterval(updateAvailability, 15 * 60 * 1000);
 
   var header = document.getElementById("siteHeader");
+  var progress = document.getElementById("scrollProgress");
 
-  function updateHeader() {
+  function updateScroll() {
     if (header) {
       header.classList.toggle("is-scrolled", window.scrollY > 8);
     }
+
+    if (progress) {
+      var height = document.documentElement.scrollHeight - window.innerHeight;
+      var ratio = height > 0 ? Math.min(1, Math.max(0, window.scrollY / height)) : 0;
+      progress.style.transform = "scaleX(" + ratio + ")";
+    }
   }
 
-  updateHeader();
-  window.addEventListener("scroll", updateHeader, { passive: true });
+  updateScroll();
+  window.addEventListener("scroll", updateScroll, { passive: true });
+  window.addEventListener("resize", updateScroll);
 
   var year = document.getElementById("year");
   if (year) {
     year.textContent = String(new Date().getFullYear());
+  }
+
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll(".primary-nav a"));
+  var sections = navLinks
+    .map(function (link) {
+      return document.querySelector(link.getAttribute("href"));
+    })
+    .filter(Boolean);
+
+  if ("IntersectionObserver" in window && sections.length) {
+    var navObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) {
+            return;
+          }
+          navLinks.forEach(function (link) {
+            link.classList.toggle("is-active", link.getAttribute("href") === "#" + entry.target.id);
+          });
+        });
+      },
+      { rootMargin: "-30% 0px -60% 0px" }
+    );
+
+    sections.forEach(function (section) {
+      navObserver.observe(section);
+    });
   }
 
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -197,7 +179,7 @@
           }
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
     );
 
     Array.prototype.forEach.call(revealItems, function (item) {
